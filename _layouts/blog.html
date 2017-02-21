@@ -1,0 +1,89 @@
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h3><i>blog</i></h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a id="mainBlogButt" href="#">All Posts</a>
+                    </li>
+                    <li>
+                        <a id="tutorialBlogButt" href="#">Tutorials</a>
+                    </li>
+                    <li>
+                        <a id="researchBlogButt" href="#">Research</a>
+                    </li>
+                </ul><br>
+            </div>
+
+            <!-- main blog posts -->
+
+            <div id="blogPosts" class="col-sm-6">
+                <h4><small id="recentPosts">ALL POSTS</small></h4>
+                {% for post in site.categories.blog limit:5 %}
+
+                    <hr>
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <br>
+
+                {% endfor %}
+                <hr>
+            </div>
+
+            <!-- tutorial posts -->
+
+            <div id="tutorialPosts" class="col-sm-6">
+                <h4><small id="recentPosts">TUTORIALS</small></h4>
+                {% for post in site.tags.tutorial %}
+
+                    <hr>
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <br>
+
+                    <p>{{ post.excerpt }}</p>
+
+                {% endfor %}
+                <hr>
+            </div>
+
+            <!-- research posts -->
+
+            <div id="researchPosts" class="col-sm-6">
+                <h4><small id="recentPosts">RESEARCH</small></h4>
+                {% for post in site.tags.research %}
+
+                    <hr>
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <br>
+
+                    <p>{{ post.excerpt }}</p>
+
+                {% endfor %}
+                <hr>
+            </div>
+
+        <div class="col-sm-3 sidenav">
+        </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+{% include footer.html %}
