@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Work Summary 11/14/2017
+title: Work Summary 01/14/2017
 categories: blog
 tags: standard
 date: January 14, 2017
