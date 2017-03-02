@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 	var quote = jQuery('#quote');
 	var author = jQuery('#author');
-	var URL = "https://api.myjson.com/bins/106ct3";
+	var URL = "https://api.myjson.com/bins/1b3wep";
 	jQuery.get(URL, function(response) { 
 		 var rand = Math.floor((Math.random() * 5) + 1);
 		 var rand = rand - 1;
