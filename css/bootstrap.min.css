@@ -6243,6 +6243,7 @@ a.thumbnail:hover {
 }
 
 .thumbnail .caption {
+  display:none;
   padding: 9px;
   color: #333;
 }
