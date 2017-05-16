@@ -1,46 +1,66 @@
-
 {% include head.html %}
+
 
 <body>
 
     {% include header.html %}
 
+    
     <div class="container-fluid bg-3 text-center">
-        <h3><i>recent work</i></h3>
+        <center>
+            <img width="50%" style="display: block; margin-bottom: 1em; border-radius: 50%;" src="/assets/about/biopic.png" />
+        </center>
+        <p> I’m Kaira Ray Villanueva—a data science student at Columbia University, former software engineer at Agrilyst, and paleoclimate researcher at Lamont Doherty Earth Observatory. I’m interested in computational sciences, mainly mapping the past climate within the Holocene epoch or present storms.</p>
+        
+        <h3>
+            <i>recent work</i>
+        </h3>
         <br>
-        <div class="row">
+            <div class="row">
             {% for post in site.categories.projects limit:3 %}
+                
                 <div class="col-sm-4">
                     <div class="projectImageOverlay">
                         <a href="{{ post.url }}">
-                        <img class="projectImage" src="{{ post.img }}" alt="Image">
-                        </a>
-                        <h4 id="projectHeader">{{ post.title }}</h4>
-                    </div> 
-                </div>
+                            <img class="projectImage" src="{{ post.img }}" alt="Image">
+                            </a>
+                            <h4 id="projectHeader">{{ post.title }}</h4>
+                        </div>
+                    </div>
             {% endfor %}
-            <a href="{{ site.baseurl }}/projects"><h4>more projects</h4></a>
-        </div>
-    </div>
-    <br><br>
-    <div id="blog" class="container-fluid bg-3 text-center">
-        <h3><i>recent thoughts</i></h3>
-        <br>
-        <div class="row">
+            
+                    <a href="{{ site.baseurl }}/projects">
+                        <h4>more projects</h4>
+                    </a>
+                </div>
+            </div>
+            <br>
+                <br>
+                    <div id="blog" class="container-fluid bg-3 text-center">
+                        <h3>
+                            <i>recent thoughts</i>
+                        </h3>
+                        <br>
+                            <div class="row">
             {% for post in site.categories.blog limit:2 %}
-                <div class="col-sm-12">
-                    <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-                    <p>{{ post.date | date_to_long_string }}</p>
-                </div>
+                
+                                <div class="col-sm-12">
+                                    <a href="{{ post.url }}">
+                                        <h2>{{ post.title }}</h2>
+                                    </a>
+                                    <p>{{ post.date | date_to_long_string }}</p>
+                                </div>
             {% endfor %}
-        </div>
-        <a href="{{ site.baseurl }}/blog"><h4>more posts</h4></a>
-    </div>
-    <br>
-    <br>
-    <br>
-
-</body>
+        
+                            </div>
+                            <a href="{{ site.baseurl }}/blog">
+                                <h4>more posts</h4>
+                            </a>
+                        </div>
+                        <br>
+                            <br>
+                                <br>
+                                </body>
 
 {% include footer.html %}
 
