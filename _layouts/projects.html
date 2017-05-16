@@ -10,28 +10,22 @@
             <div class="col-sm-3 sidenav">
                 <h3><i>blog</i></h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active">
-                        <a id="mainBlogButt" href="#">All Posts</a>
-                    </li>
-                    <li>
-                        <a id="tutorialBlogButt" href="#">Tutorials</a>
-                    </li>
-                    <li>
-                        <a id="researchBlogButt" href="#">Research</a>
-                    </li>
+                    <li class="active"><a id="totalProjects" href="#">All Posts</a></li>
+                    <li><a id="webProjects" href="#">Web</a></li>
+                    <li><a id="mobileProjects" href="#">Mobile</a></li>
+                    <li><a id="dataProjects" href="#">Date</a></li>
+                    <li><a id="researchProjects" href="#">Research</a></li>
+                    <li><a id="gameProjects" href="#">Games</a></li>
                 </ul><br>
             </div>
 
             <!-- main blog posts -->
 
-            <div id="totalProjects" class="col-sm-6">
+            <div id="totalProjects" class="col-sm-5">
                 <h4><small id="recentPosts">PROJECTS</small></h4>
                 {% for post in site.categories.projects %}
-
                     <hr>
-                    <a href="{{ post.url }}">
-                        <h2>{{ post.title }}</h2>
-                    </a>
+                    <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
                     <h5>{{ post.date | date_to_long_string }}</h5>
                     <img class="miniProjectImage" src="{{ post.img }}" />
                     <br>
@@ -42,7 +36,7 @@
 
             <!-- tutorial posts -->
 
-            <div id="tutorialPosts" class="col-sm-6">
+            <div id="tutorialPosts" class="col-sm-5">
                 <h4><small id="recentPosts">TUTORIALS</small></h4>
                 {% for post in site.tags.tutorial %}
 
@@ -59,7 +53,7 @@
 
             <!-- research posts -->
 
-            <div id="researchPosts" class="col-sm-6">
+            <div id="researchPosts" class="col-sm-5">
                 <h4><small id="recentPosts">RESEARCH</small></h4>
                 {% for post in site.tags.research %}
 
@@ -74,7 +68,7 @@
                 <hr>
             </div>
 
-        <div class="col-sm-3 sidenav">
+        <div class="col-sm-4 sidenav">
         </div>
 
 
