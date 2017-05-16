@@ -21,24 +21,30 @@
 
             <!-- main blog posts -->
 
-            <div id="totalProjects" class="col-sm-5">
+            <div id="totalProjectsContent" class="col-sm-5">
                 <h4><small id="recentPosts">PROJECTS</small></h4>
                 {% for post in site.categories.projects %}
                     <hr>
                     <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-                    <h5>{{ post.date | date_to_long_string }}</h5>
-                    <img class="miniProjectImage" src="{{ post.img }}" />
+                    <div class="thumbnail" >
+                        <img class="miniProjectImage" src="{{ post.img }}" />
+                            <div class="caption">
+                                <h4>{{ post.title }}</h4>
+                            </div>
+                    </div>
                     <br>
-
                 {% endfor %}
                 <hr>
             </div>
 
+
+
             <!-- tutorial posts -->
 
-            <div id="tutorialPosts" class="col-sm-5">
-                <h4><small id="recentPosts">TUTORIALS</small></h4>
-                {% for post in site.tags.tutorial %}
+
+            <div id="tutorialPostsContent" class="col-sm-5">
+                <h4><small id="recentPosts">WEB</small></h4>
+                {% for post in site.tags.data %}
 
                     <hr>
                     <a href="{{ post.url }}">
@@ -53,7 +59,7 @@
 
             <!-- research posts -->
 
-            <div id="researchPosts" class="col-sm-5">
+            <div id="researchPostsContent" class="col-sm-5">
                 <h4><small id="recentPosts">RESEARCH</small></h4>
                 {% for post in site.tags.research %}
 
