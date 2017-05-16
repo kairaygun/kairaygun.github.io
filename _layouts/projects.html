@@ -5,132 +5,82 @@
 
     {% include header.html %}
 
-            <div class="container wrapper text-center">
-
-            <br />
-            <h3><i>projects</i></h3>
-            <hr>
-            <div class="pull-center">
-                <button id="totalProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="total">
-                    All
-                </button>
-                <button id="webProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="web">
-                    Web
-                </button>
-                <button id="mobileProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="mobile">
-                    Mobile
-                </button>
-                <button id="dataProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="data">
-                    Data
-                </button>
-
-                <button id="researchProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="research">
-                    Research
-                </button>
-
-                <button id="gameProjects" style="margin-top: 0.5em" class="btn btn-small btn-primary" data-toggle="portfilter" data-target="games">
-                    Games
-                </button>
-
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h3><i>blog</i></h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a id="mainBlogButt" href="#">All Posts</a>
+                    </li>
+                    <li>
+                        <a id="tutorialBlogButt" href="#">Tutorials</a>
+                    </li>
+                    <li>
+                        <a id="researchBlogButt" href="#">Research</a>
+                    </li>
+                </ul><br>
             </div>
-            <div class="clearfix"></div>
 
-            <br />
+            <!-- main blog posts -->
 
-            <ul class="thumbnails gallery">
+            <div id="totalProjects" class="col-sm-6">
+                <h4><small id="recentPosts">PROJECTS</small></h4>
+                {% for post in site.categories.projects %}
 
-            {% for post in site.categories.projects %}
-                <li class="span3" data-tag='total'>
+                    <hr>
                     <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
+                        <h2>{{ post.title }}</h2>
                     </a>
-                </li>
-            {% endfor %}
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <img class="miniProjectImage" src="{{ post.img }}" />
+                    <br>
 
-            {% for post in site.tags.data %}
-                <li class="span3" data-tag='data'>
+                {% endfor %}
+                <hr>
+            </div>
+
+            <!-- tutorial posts -->
+
+            <div id="tutorialPosts" class="col-sm-6">
+                <h4><small id="recentPosts">TUTORIALS</small></h4>
+                {% for post in site.tags.tutorial %}
+
+                    <hr>
                     <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
+                        <h2>{{ post.title }}</h2>
                     </a>
-                </li>
-            {% endfor %}
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <br>
 
-            {% for post in site.tags.games %}
-                <li class="span3" data-tag='games'>
+                {% endfor %}
+                <hr>
+            </div>
+
+            <!-- research posts -->
+
+            <div id="researchPosts" class="col-sm-6">
+                <h4><small id="recentPosts">RESEARCH</small></h4>
+                {% for post in site.tags.research %}
+
+                    <hr>
                     <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
+                        <h2>{{ post.title }}</h2>
                     </a>
-                </li>
-            {% endfor %}
+                    <h5>{{ post.date | date_to_long_string }}</h5>
+                    <br>
 
-            {% for post in site.tags.science %}
-                <li class="span3" data-tag='research'>
-                    <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            {% endfor %}
+                {% endfor %}
+                <hr>
+            </div>
 
-            {% for post in site.tags.web %}
-                <li class="span3" data-tag='web'>
-                    <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            {% endfor %}
-
-            {% for post in site.tags.mobile %}
-                <li class="span3" data-tag='mobile'>
-                    <a href="{{ post.url }}">
-                        <div class="thumbnail" >
-                            <img class="miniProjectImage" src="{{ post.img }}" />
-                            <div class="caption">
-                                <h4>{{ post.title }}</h4>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            {% endfor %}
-
-
-
-            </ul>
-
-            </ul>
-            <div class="push"></div>
+        <div class="col-sm-3 sidenav">
         </div>
 
-    <br>
-    <br>
-    <br>
 
+
+        </div>
+    </div>
 </body>
 
 {% include footer.html %}
-
-
