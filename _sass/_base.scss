@@ -87,6 +87,12 @@ ul, ol, dl, figure,
  .miniProjectImage {
     width:100%; 
     position: relative; 
+    filter: grayscale(100%);
+}
+
+ .miniProjectImage:hover {
+    background-color: yellow;
+    filter: grayscale(0%);
 }
 
 img {
@@ -99,6 +105,12 @@ img {
     height:40%; 
     opacity:0.3;
     position: relative; 
+    filter: grayscale(100%);
+}
+
+.projectImage:hover {
+    background-color: yellow;
+    filter: grayscale(0%);
 }
 
 .projectImageOverlay {
@@ -117,6 +129,10 @@ img {
    color: white;
    letter-spacing: -0.08em;
    font-size: 3em; 
+}
+
+#projectTitle {
+    background-color:black;
 }
 
 /**
