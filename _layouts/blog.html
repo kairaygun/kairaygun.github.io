@@ -5,11 +5,14 @@
 
     {% include header.html %}
 
-            <!-- main blog posts -->
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav"></div>
 
-            <div id="blogPosts" class="col-sm-12">
+            <!-- main blog posts -->
+            <div id="blogPosts" class="col-sm-6">
                 <h4><small id="recentPosts">ALL POSTS</small></h4>
-                {% for post in site.categories.blog  %}
+                {% for post in site.categories.blog limit:5 %}
 
                     <hr>
                     <a href="{{ post.url }}">
@@ -22,9 +25,7 @@
                 <hr>
             </div>
 
-
-
-
+            <div class="col-sm-3 sidenav"></div>
 
         </div>
     </div>
