@@ -23,10 +23,8 @@
     <br>
 
     <div class="container-fluid bg-3 text-center">
+      {% for post in site.categories.projects %}
       <div class="row">
-
-        <h4><small id="recentPosts">PROJECTS</small></h4>
-        {% for post in site.categories.projects %}
           <div class="col-sm-2"></div>
           <div class="col-sm-5">
             <a href="{{ post.url }}"><img class="miniProjectImage" src="{{ post.img }}"/></a>
@@ -35,7 +33,7 @@
             <a href="{{ post.url }}"><h2 id="projectTitle">{{ post.title }}</h2></a>
           </div>
           <div class="col-sm-2"></div>
-        {% endfor %}
+      {% endfor %}
         <hr>
       </div>
     </div>
