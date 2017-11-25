@@ -23,6 +23,57 @@
     <br>
 
     <div class="container-fluid bg-3 text-center">
+
+      <div class="jprt-buttons">
+
+  <button class="jprt-btn"
+    data-jprtgrid="jprt-1"
+    data-tag="fruits" >
+    Fruits
+  </button>
+
+  <button class="jprt-btn"
+    data-jprtgrid="jprt-1"
+    data-tag="vegetables">
+    Vegetables
+  </button>
+
+</div>
+      <div id="jprt-1" class="jprt-container">
+
+        <!-- first item -->
+
+        <div class="jprt-item" data-tags="fruits">
+          <div class="jprt-caption">
+
+            <!-- caption -->
+
+          </div>
+          <div class="jprt-content">
+
+            <!-- content -->
+
+          </div>
+          <div class="jprt-hover">
+
+            <!-- hover -->
+
+          </div>
+        </div>
+
+        <!-- second item -->
+
+        <div class="jprt-item" data-tags="fruits,vegetables">
+
+          <!-- ... -->
+
+        </div>
+
+        <!-- other items -->
+
+      </div>
+
+
         <div class="row">
             {% for post in site.categories.projects limit:3 %}
                 <div class="col-sm-4">
