@@ -5216,11 +5216,12 @@ textarea.input-group-sm>.input-group-btn>.btn {
 /* navbar */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 3;
+  box-shadow: 1px 1px 2px black;
 }
 
 .navbar a {
