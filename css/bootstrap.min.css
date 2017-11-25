@@ -5213,10 +5213,26 @@ textarea.input-group-sm>.input-group-btn>.btn {
   border-top-right-radius: 0;
 }
 
+/* navbar */
 .navbar {
-  position: relative;
-  min-height: 50px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 
 @media (min-width: 768px) {
   .navbar {
