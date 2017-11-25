@@ -23,17 +23,32 @@
     <br>
 
     <div class="container-fluid bg-3 text-center">
+
       {% for post in site.categories.projects %}
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-              <a href="{{ post.url }}"><img class="miniProjectImage" src="{{ post.img }}"/></a>
+        {% assign mod = forloop.index | modulo: 2 %}
+          {% if mod == 0 %}
+            <div class="row" style="background-color: black;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                  <a href="{{ post.url }}"><img class="miniProjectImage" src="{{ post.img }}"/></a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="{{ post.url }}"><h2 id="projectTitle">{{ post.title }}</h2></a>
+                </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-sm-4">
-              <a href="{{ post.url }}"><h2 id="projectTitle">{{ post.title }}</h2></a>
+          {% else %}
+            <div class="row" style="background-color: white;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                  <a href="{{ post.url }}"><img class="miniProjectImage" src="{{ post.img }}"/></a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="{{ post.url }}"><h2 id="projectTitle">{{ post.title }}</h2></a>
+                </div>
+                <div class="col-sm-2"></div>
             </div>
-            <div class="col-sm-2"></div>
-        </div>
+          {% endif %}
       {% endfor %}
     </div>
 
