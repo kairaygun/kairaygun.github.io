@@ -7,6 +7,12 @@ window.onload = function() {
     var section = document.getElementsByClassName("container-section");
     var original_section = section[0].className;
 
+    // Testing
+    var testbutton = document.getElementById("1modal-button");
+    testbutton.onclick = function() {
+        console.log("what what what");
+    }
+
     function showModal(e) {
 
         /** Modal display **/
@@ -112,6 +118,8 @@ window.onload = function() {
         }
 
     };
+
+
 
     // Loop through all the modal trigger buttons
     for (var i = 0; i < elements.length; i++) {
