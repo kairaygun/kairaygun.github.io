@@ -10,12 +10,10 @@
             <div class="one-section-container">
                 <div class="one-section-content">
                     <h2>{{ post.title }}</h2>
-                    <h2>
-                         <!-- Modal Trigger -->
-                        <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button blink">
+                    <!-- Modal Trigger -->
+                    <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button blink">
                             >>   
                         </button>
-                    </h2>
                     <p>{{ post.date}}</p>
                 </div>
             </div>
