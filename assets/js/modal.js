@@ -30,6 +30,7 @@ window.onload = function() {
 
         // On button click ''>>' 
         button_modal.onclick = function() {
+            console.log("clicking clicking");
             // Opens the modal
             modal.style.display = "block";
             // Blurs the background
