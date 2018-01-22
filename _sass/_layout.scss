@@ -14,8 +14,8 @@ html {
         main {
             margin-bottom: 20px;
             margin-top: 60px;
-            padding-left: 5px;
-            padding-right: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
 
             /* Default sizing for images in main */
             img {
@@ -26,7 +26,7 @@ html {
             /* Container for single columns in main 
                Used for the blog index */
             .one-section-container {
-                padding: 10px;
+                padding: 20px;
 
                 /* Organizes content display of single column 
                    Default for mobile */
@@ -34,9 +34,9 @@ html {
                     background-color: $dark-green-color;
                     box-shadow: 2px 2px 8px $black-color;
                     margin: 0 auto;
-                    padding-left: 5px;
-                    padding-right: 5px;
-                    width: 280px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    width: 300px;
 
                     /* Desktop display for single column */
                     @media screen and (min-width: 700px) {
@@ -58,7 +58,7 @@ html {
                     display: block;
                     margin: 0 auto;
                     vertical-align: top;
-                    width: 280px;
+                    width: 300px;
 
                     /* Image display inside a double columns  
                        Used for both mobile and desktop */
