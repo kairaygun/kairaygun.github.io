@@ -1,13 +1,10 @@
 ---
-layout: post
 title: Reflections from the Underground Columbia Web Development Lair
 categories: blog
-tags: standard
 date: March 17, 2016
 --- 
 
-One week from now, it will be March 25th, which marks the day last year when I submitted my application to Columbia College Information Technology (CCIT). Before interning at CCIT, I was roughly prototyping static websites and CMS (content management systems) were foreign; handling the bare-bones functionality of WordPress was the extent of my knoweldge in CMS. CCIT's development stack is wrapped around Drupal, an open-source CMS. When I thought of Drupal then, I rememeber words like <i>open-source</i> and <i>CMS</i> that hoisted a sense of caliber, but these are merely technical jargon and nothing more. Instilling prestige in software or culture is unheatlhy, and I'm glad I broke this pattern of thought before it broke me down. Having said that, the experiece I had at CCIT was irreplaceable and valuable.
-<br>
+One week from now, it will be March 25th, which marks the day last year when I submitted my application to Columbia College Information Technology (CCIT). Before interning at CCIT, I was roughly prototyping static websites and CMS (content management systems) were foreign; handling the bare-bones functionality of WordPress was the extent of my knoweldge in CMS. CCIT's development stack is wrapped around Drupal, an open-source CMS. When I thought of Drupal then, I rememeber words like <em>open-source</em> and <em>CMS</em> that hoisted a sense of caliber, but these are merely technical jargon and nothing more. Instilling prestige in software or culture is unheatlhy, and I'm glad I broke this pattern of thought before it broke me down. Having said that, the experiece I had at CCIT was irreplaceable and valuable.
 
 <strong>Web Development Skills Before CCIT: </strong>  
 HTML, CSS, JavaScript, jQuery, and Jekyll  
@@ -15,7 +12,6 @@ HTML, CSS, JavaScript, jQuery, and Jekyll
 <strong>Web Development Skills After CCIT: </strong>  
 HTML, CSS, JavaScript, jQuery, Jekyll, Drupal, PHP, phpMyAdmin, and Vagrant 
 
-<br>
 <strong>Summer 2015 Projects:</strong>
 
 •	Redesign and Implement Columbia Core Website 
@@ -24,7 +20,7 @@ HTML, CSS, JavaScript, jQuery, Jekyll, Drupal, PHP, phpMyAdmin, and Vagrant
 
 •	Generate Columbia College Fall 2015 Web Pages  
 
-In the second week of June 2015, I was tasked with redesigning Columbia University’s Core website. This was mildly intimidating. Templating designs in Drupal, and Drupal in general flustered me. I did not know where to start. My head felt like it was being deep-fried into oblivion. Onboarding in a Drupal stack consisted of setting-up a vagrant box and locally developing within that space. It took me two weeks until I started feeling <i>okay</i> with Drupal. And when I did not feel comfortable, I asked questions.   
+In the second week of June 2015, I was tasked with redesigning Columbia University’s Core website. This was mildly intimidating. Templating designs in Drupal, and Drupal in general flustered me. I did not know where to start. My head felt like it was being deep-fried into oblivion. Onboarding in a Drupal stack consisted of setting-up a vagrant box and locally developing within that space. It took me two weeks until I started feeling <em>okay</em> with Drupal. And when I did not feel comfortable, I asked questions.   
 
 The hardest part was admitting that I did not know what I was doing. I signed-up for an internship that posits a place for learning, hence asking questions should be expected, yet I had difficulty with inquring for assistance whenever I was stuck or lost. I tried to save face but that only brought more anxiety. What is more important: your ego or you? Waiting for a premonition to a solution is not going to happen. I didn't have a Nostradamus excerpt to all the bugs I have to fix. I reached a breaking point, and from there on, I discovered how to embrace humility. I am grateful that my boss, along with co-workers answered my questions with care and concern. 
 
@@ -34,7 +30,6 @@ Along with publishing CCT web pages, I completed the loan input for Columbia’s
 
 As for the redesign of Columbia College’s Core website, I did not finish it, so that project carried over in the fall semester.
 
-<br>
 <strong>Fall 2015 Projects: </strong>
 
 •	Redesign and Implement Columbia Core Website 
@@ -55,7 +50,6 @@ Columbia College also wanted a mobile ready Visitor Center webpage, and I mocked
 
 Finally, I was given my second redesign task. Columbia College has a Parents and Family Program website, and it was only available to developers at the time. It needed a sticky header, responsive content collection, and a few adjustments in extending div heights. The size changes in the footer were effortlessly done in one day. The sticky navigation bar was a little tricky. I did meet the end goal, and when I consulted my boss with this solution, he recommended doing it in another way, and he briefly showed me that instead of directly changing each affected component in the style sheets, a div encasement and tagging that div with a class would make for a cleaner and effective implementation. I followed up with his suggestions, and I was able to replicate the work I did in one week in one day. 
 
-<br>
 <strong>Winter 2016 </strong>
 
 •	Redesign Parents and Family Programs Website
@@ -64,7 +58,6 @@ Around this time, I had the aha moment. Everything in Drupal all of the sudden m
 
 During winter recess, I continued working on the Parents and Family Programs website. My boss advised that I should use Masonry, a JavaScript library, to display the current list content in a grid structure. I prototyped a quick test to check Masonry’s features, and I was sold. I converted the content to a tumblr-like grid, which accustomed to various media queries. At first, this task seemed overwhelming but as I kept developing, the task became less and less daunting.
 
-<br>
 <strong> Spring 2016 </strong>
 
 •	Migrate CCIT Website from Drupal 6 to 7

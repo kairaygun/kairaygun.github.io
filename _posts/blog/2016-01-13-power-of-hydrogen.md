@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Power of Hydrogen--What is it?
 categories: blog
-tags: research
 date: January 13, 2016
-img: /assets/zetron.png
 ---
 
 New year, new projects! At first, I wanted to refine a journaling application I did a few months back, [Lewis and Clark](https://github.com/Zovfreullia/Lewis-and-Clark), but a good part of me is screaming "hardware" and I just have to go for it. This is the first of many posts where I will be talking about my process of creating a pH meter application that will be connected to a pH probe.

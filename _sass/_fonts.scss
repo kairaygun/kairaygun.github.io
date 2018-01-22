@@ -1,0 +1,142 @@
+/*** FONTS  ***/
+
+@font-face {
+    font-family: Alien;
+    src: url("../assets/fonts/alien.ttf");
+}
+
+@font-face {
+    font-family: VCR;
+    src: url("../assets/fonts/vcr.ttf");
+}
+
+@font-face {
+    font-family: Borgen;
+    src: url("../assets/fonts/borgen.otf");
+}
+
+@font-face {
+    font-family: CallingCode;
+    src: url("../assets/fonts/callingcode.ttf");
+}
+
+$alien-font: Alien;
+$borgen-font: Borgen;
+$callingcode-font: CallingCode;
+$vcr-font: VCR;
+
+/* Default Main Styles */
+main {
+    /* H1 - Used for labeling a section
+        i.e. projects, navigation, intro
+        */
+    h1 {
+        color: $white-color;
+        filter: blur(0.8px);
+        font-family: $vcr-font;
+        font-size: 36px;
+        padding-bottom: 15px;
+        text-align: center;
+        text-shadow: 2px 2px 10px black;
+    }
+    /* H2 - Used for labeling a posts's title
+        i.e. blog title, project title  */
+    h2 {
+        color: $white-color;
+        filter: blur(0.7px);
+        font-family: $vcr-font;
+        font-size: 24px;
+        padding: 15px 0 15px 0;
+        text-shadow: 2px 2px 10px black;
+    }
+    /* H3 - Used for meta data supporting a posts's title
+        i.e. dates,description */
+    h3 {
+        color: $white-color;
+        font-family: $vcr-font;
+        font-size: 20px;
+        padding: 15px 0 15px 0;
+    }
+
+    /* H4 - Used within the post to organize content
+        i.e. Post: Foods -- "Breakfast", "Lunch" */
+    h4 {
+        font-family: $vcr-font;
+        font-size: 14px;
+    }
+
+    /* H6 - Used for additional description
+        "THIS IMAGE IS FROM [SOURCE]" */
+    h6 {
+        font-family: $vcr-font;
+        font-size: 8px;
+    }
+
+    /* P - Used for the body of a content */
+    p {
+        color: $white-color;
+        font-family: $callingcode-font;
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 15px;
+        text-shadow: 2px 2px 2px $black-color;
+    }
+
+    /* Pre - Used for displaying code */
+    pre {
+        color: #fff;
+        background-color: #323834;
+        font-family: CallingCode;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 15px 0 15px 0;
+        padding: 15px;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+}
+
+/* Default Footer Styles */
+footer {
+    /* H5 - Used for footer copyright
+        i.e. Kaira Villanueva (c) */
+    h5 {
+        color: $white-color;
+        filter: blur(0.4px);
+        font-family: $callingcode-font;
+        font-size: 12px;
+        padding: 8px 0 8px 0;
+        text-shadow: 2px 2px 10px black;
+        text-transform: uppercase;
+    }
+
+    /* H6 - Used for footer author names 
+        i.e. Kaira Villanueva */
+    h6 {
+        color: $white-color;
+        filter: blur(0.3px);
+        font-family: $callingcode-font;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    /* P - Used for for brief bio */
+    p {
+        color: $white-color;
+        filter: blur(0.3px);
+        font-family: $callingcode-font;
+        font-size: 12px;
+        padding: 8px 0 8px 0;
+        width: 300px;
+    }
+
+    /* UL - Used for footer font-awesome icons
+        i.e. Github icon */
+    ul {
+        color: $white-color;
+        font-family: $borgen-font;
+    }
+}

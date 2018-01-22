@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Sending Emails With Mandrill and Mailgun API
 categories: blog
-tags: tutorial
 date: March 01, 2016
 ---
 

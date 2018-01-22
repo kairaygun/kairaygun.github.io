@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Sustainable Consumption
 categories: blog
-tags: standard
 date: January 18, 2016
 ---
 

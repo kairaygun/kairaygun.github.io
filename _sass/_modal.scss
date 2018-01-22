@@ -1,0 +1,127 @@
+/*** MODAL ***/
+
+/* Main Modal */
+.modals {
+    display: none;         /* Hidden by default */
+    height: 100%;          /* Full height */
+    left: 0;
+    overflow: auto;        /* Enable scroll if needed */
+    padding-top: 100px;    /* Location of the box */
+    position: fixed;       /* Stay in place */
+    top: 0;
+    width: 100%;           /* Full width */
+    z-index: 2;            /* Sit on top */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: $dark-gray-color;
+    background-size: cover;
+    box-shadow: 2px 2px 7px 2px $black-color;
+    margin: auto;
+    padding: 10px;
+    width: 340px;
+    vertical-align: top;
+
+    /* Desktop width defaults */
+    @media screen and (min-width: 700px) {
+        width: 60%;
+    }
+
+    /* Overrides paragraph in fonts.scss */
+    p {
+        color: $dirty-white-color;
+        font-family: CallingCode;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 15px 0 15px 0;
+        word-spacing: 1.6px;
+        word-break: break-word;
+    }
+
+    li {
+        color: $dirty-white-color;
+        font-family: $callingcode-font;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 15px 0 15px 0;
+    }
+}
+
+/* Modal Trigger Button */
+.modal-button {
+    background-color: transparent;
+    border-style: none;
+    color: $white-color;
+    padding-bottom: 15px;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+    color: $green-color;
+    cursor: pointer;
+}
+
+/* Blurs the background when modal
+   pops up on the screen */
+.open-modal {
+    filter: blur(8px);
+    -moz-filter: blur(8px);
+    -ms-filter: blur(8px);
+    -o-filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* Modal Close Button */
+.close-modal {
+    color: $white-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* On hover, change the color of (x) 
+   close button */
+.close-modal:hover,
+.close-modal:focus {
+    color: $black-color;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    margin: auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Slideshow Next & Previous Buttons */
+.prev, .next {
+    color: $white-color;
+    cursor: pointer;
+    background-color: $dark-gray-color;
+    border-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -22px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    transition: 0.6s ease;
+    width: auto;
+}
+
+/* Next (>) button position to the right */
+.next {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+
+/* On hover, change background color of
+   next (>) and previous (<) buttons */
+.prev:hover, .next:hover {
+    background-color: $white-color;
+    color: $black-color;
+    opacity: 0.2;
+}

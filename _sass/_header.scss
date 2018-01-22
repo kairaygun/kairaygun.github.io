@@ -1,0 +1,25 @@
+/*** MAIN HEADER  ***/
+
+/* Mainpulates header display to take up
+   the whole screen */
+header {
+    background-color: $black-color;
+    background-image: url('https://www.alienuniverse.com/assets/site/images/bg_missions.jpg');
+    background-size: cover;
+    box-shadow: 0 5px 10px -5px $black-color;
+    height: 100vh;
+    margin: 0;
+
+    /* Overrides default H1 values under 
+       fonts.scss for header display only */
+    h1 {
+        color: $white-color;
+        font-family: $alien-font;
+        font-size: 60px;
+        line-height: 800%;
+        text-align: center;
+        @media screen and (min-width: 500px) {
+            letter-spacing: 20px;
+        }
+    }
+}

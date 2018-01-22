@@ -1,0 +1,39 @@
+/*** FOOTER  ***/
+
+
+/* Manipulates the footer section focusing
+   on color, margins, and sizing */
+
+footer {
+    background-color: $black-color;
+    box-shadow: 0 0 5px $white-color,
+    0 0 10px $white-color,
+    0 0 20px $yellow-color,
+    0 0 30px $green-color,
+    0 0 40px $green-color,
+    0 0 55px $green-color,
+    0 0 75px $green-color;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin-top: 5em;
+    width: 100%;
+
+    /* Organizes the display of footer content and
+       list elements to behave responsively  */
+    .footer-container {
+        margin: 20px 0 10px 0;
+
+        /* Mobile default display */
+        .footer-content {
+            display: block;
+            padding: 5px;
+            vertical-align: top;
+
+            @media screen and (min-width: 600px) {
+                display: inline-block;
+                padding: 5px 10px 5px 5px;
+            }
+        }
+    }
+}

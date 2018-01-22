@@ -1,37 +1,59 @@
 {% include head.html %}
-
 <body>
-    {% include header.html %}
-    <br>
-    <br>
+    {% include navigation.html %} {% include header.html %}
+    <main id="main">
+        <h1>PORTFOLIO<span class="blink">_</span></h1>
 
-    <div class="container-fluid bg-1">
-      <div class="col-sm-12 text-center" style="font-family: 'Playfair Display', serif;">
-           <h2 class="animated infinite pulse" id="projectHeadline">PROJECTS</h2>
-    	</div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container-fluid bg-3 text-center">
-
-      {% for post in site.categories.projects %}
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4">
-                  <a href="{{ post.url }}"><img class="miniProjectImage" src="{{ post.img }}"/></a>
+        <!-- Main Section -->
+        <section class="container-section">
+            {% for post in site.categories.projects %}
+            <div class="two-section-container">
+                <div class="two-section-content">
+                    <img src="{{ post.img }}" />
                 </div>
-                <div class="col-sm-4 text-center" style="background-color: black;box-shadow: 2px 2px 3px grey;">
-                  <a href="{{ post.url }}"><h2 style="color:#FFF;">{{ post.title }}</h2></a>
+                <div class="two-section-content">
+                    <h2>
+                        {{ post.title }} 
+                        <!-- Modal Trigger -->
+                        <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button blink">
+                            >>
+                        </button>
+                    </h2>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    </p>   
                 </div>
-                <div class="col-sm-2"></div>
             </div>
-      {% endfor %}
-    </div>
+            {% endfor %}
+        </section>
 
+        <!-- Modal Section -->
+        <section class="modal-section">
+            {% for post in site.categories.projects %}
+                <div id="{{ "modal" | prepend: forloop.index }}" class="modals">
+                    <div class="modal-content">
+                        <h2>
+                            {{ post.title }}<span class="close-modal">&times;</span>
+                        </h2>
+                        <div class ="slideshow-container">
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                            <div class="{{ "slideshow-content" | prepend: forloop.index }}">
+                                {% for image in site.static_files %}
+                                    {% if image.path contains post.imagetitle %}
+                                        <img class="image-slides" src="{{ site.baseurl }}{{ image.path }}" alt="image">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
 
-    <br>
+                        </div>
+                        <p>{{ post.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
 
+    </main>
+    {% include footer.html %}
 </body>
-
-{% include footer.html %}
+</html>
