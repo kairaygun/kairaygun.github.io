@@ -7,17 +7,14 @@ window.onload = function() {
     var section = document.getElementsByClassName("container-section");
     var original_section = section[0].className;
 
-    // Loop through all modal trigger buttons and declare
-    // a variable for each available button
+    // Loop through all modal trigger buttons and store in array - mobile hack
     var trigger_buttons = [];
     for (var i = 0; i < elements.length; i++) {
         trigger_buttons[i] = (i + 1) + "modal-button";
     }
-
+    // Loop through trigger buttons array and attach a click event - mobile hack
     for (var i = 0; i < trigger_buttons.length; i++) {
-        document.getElementById(trigger_buttons[i]).onclick = function () {
-            console.log("woo woo!")
-        }
+        document.getElementById(trigger_buttons[i]).onclick = function () { }
     }
 
     // Loop through all the modal trigger buttons
@@ -27,7 +24,6 @@ window.onload = function() {
         // Attach an index parameter to each button
         elements[i].myParam = i + 1;
     }
-
 
     function showModal(e) {
 
@@ -134,9 +130,5 @@ window.onload = function() {
         }
 
     };
-
-
-
-
 
 };
