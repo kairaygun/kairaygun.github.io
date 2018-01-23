@@ -12,9 +12,11 @@
                     <img src="{{ post.img }}" />
                 </div>
                 <div class="two-section-content">
-                    <a id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button">
+                    <h2>
+                        <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button">
                             {{ post.title }}
-                    </a>
+                        </button>
+                    </h2>
                     <p> {{ post.excerpt }}</p>
                 </div>
             </div>
