@@ -7,10 +7,12 @@ window.onload = function() {
     var section = document.getElementsByClassName("container-section");
     var original_section = section[0].className;
 
-    // Testing
-    var testbutton = document.getElementById("1modal-button");
-    testbutton.onclick = function() {
-        console.log("what what what");
+    // Loop through all the modal trigger buttons
+    for (var i = 0; i < elements.length; i++) {
+        // Add a click event listener to each button
+        elements[i].addEventListener('click', showModal, false);
+        // Attach an index parameter to each button
+        elements[i].myParam = i + 1;
     }
 
     function showModal(e) {
@@ -121,12 +123,6 @@ window.onload = function() {
 
 
 
-    // Loop through all the modal trigger buttons
-    for (var i = 0; i < elements.length; i++) {
-        // Add a click event listener to each button
-        elements[i].addEventListener('click', showModal, false);
-        // Attach an index parameter to each button
-        elements[i].myParam = i + 1;
-    }
+
 
 };
