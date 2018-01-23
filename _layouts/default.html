@@ -13,10 +13,11 @@
                 </div>
                 <div class="two-section-content">
                     <h2>
-                        <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button">
-                            {{ post.title }}
-                        </button>
+                        {{ post.title }}
                     </h2>
+                    <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button blink">
+                            >>
+                    </button>
                     <p> {{ post.excerpt }}</p>
                 </div>
             </div>
