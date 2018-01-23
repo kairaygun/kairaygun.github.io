@@ -15,7 +15,7 @@ If you want to use this theme, please do not change in `footer.html`
     <h6>Powered by <strong>Jekyll</strong></h6>
 ```
 
-![alien jekyll 00](assets/images/projects/alienjekyll/alienjekyll-00.png)
-![ alien jekyll 01](assets/images/projects/alienjekyll/alienjekyll-01.png)
-![ alien jekyll 02](assets/images/projects/alienjekyll/alienjekyll-02.png)
+![alien jekyll 00](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-00.png)
+![ alien jekyll 01](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-01.png)
+![ alien jekyll 02](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-00.png)
 
