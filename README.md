@@ -15,5 +15,5 @@ If you want to use this theme, please do not change the credits in the `footer.h
 
 ![alien jekyll 00](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-00.png)
 ![ alien jekyll 01](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-01.png)
-![ alien jekyll 02](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-00.png)
+![ alien jekyll 02](https://github.com/kairaygun/kairaygun.github.io/blob/master/assets/images/projects/alienjekyll/alien-jekyll-02.png)
 
