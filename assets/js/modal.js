@@ -7,19 +7,17 @@ window.onload = function() {
     var section = document.getElementsByClassName("container-section");
     var original_section = section[0].className;
 
-    // Loop through all modal trigger buttons and store in array - mobile hack
-    var trigger_buttons = [];
+    // Store trigger button string ids inside an array - mobile hack
+    var trigger_button_ids = [];
     for (var i = 0; i < elements.length; i++) {
-        trigger_buttons[i] = (i + 1) + "modal-button";
-    }
-    // Loop through trigger buttons array and attach a click event - mobile hack
-    for (var i = 0; i < trigger_buttons.length; i++) {
-        document.getElementById(trigger_buttons[i]).onclick = function () { 
-            showModal(i + 1);
-        }
+        trigger_button_ids[i] = (i + 1) + "modal-button";
     }
 
-    /*
+    // Loop through trigger button string ids array and attach a click event - mobile hack
+    for (var i = 0; i < trigger_button_ids.length; i++) {
+        document.getElementById(trigger_button_ids[i]).onclick = function () {}
+    }
+
     // Loop through all the modal trigger buttons
     for (var i = 0; i < elements.length; i++) {
         // Add a click event listener to each button
@@ -27,15 +25,13 @@ window.onload = function() {
         // Attach an index parameter to each button
         elements[i].myParam = i + 1;
     }
-    */
 
     function showModal(e) {
 
         /** Modal display **/
 
         // Index attached to the passed button element of the function
-        // var idx = e.target.myParam;
-        var idx = e;
+        var idx = e.target.myParam;
 
         // Variables for referencing the content of each post
         var modal_id = idx + "modal";
