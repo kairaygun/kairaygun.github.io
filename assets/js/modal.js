@@ -14,9 +14,12 @@ window.onload = function() {
     }
     // Loop through trigger buttons array and attach a click event - mobile hack
     for (var i = 0; i < trigger_buttons.length; i++) {
-        document.getElementById(trigger_buttons[i]).onclick = function () { }
+        document.getElementById(trigger_buttons[i]).onclick = function () { 
+            showModal(i + 1);
+        }
     }
 
+    /*
     // Loop through all the modal trigger buttons
     for (var i = 0; i < elements.length; i++) {
         // Add a click event listener to each button
@@ -24,13 +27,15 @@ window.onload = function() {
         // Attach an index parameter to each button
         elements[i].myParam = i + 1;
     }
+    */
 
     function showModal(e) {
 
         /** Modal display **/
 
         // Index attached to the passed button element of the function
-        var idx = e.target.myParam;
+        // var idx = e.target.myParam;
+        var idx = e;
 
         // Variables for referencing the content of each post
         var modal_id = idx + "modal";
