@@ -76,7 +76,7 @@
 
 /* Modal Close Button */
 .close-modal {
-    color: $white-color;
+    color: $yellow-color;
     display: table-cell;
     float: right;
     font-size: 40px;
@@ -93,7 +93,7 @@
    close button */
 .close-modal:hover,
 .close-modal:focus {
-    color: $yellow-color;
+    color: $green-color;
     cursor: pointer;
     text-decoration: none;
 }
