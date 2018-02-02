@@ -27,7 +27,7 @@ window.onload = function() {
 
      function bindClick(i) {
         return function(){
-            showModal(i);
+            showModal(i + 1);
         };
      }
 
