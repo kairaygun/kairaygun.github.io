@@ -15,7 +15,7 @@ window.onload = function() {
 
     // Loop through trigger button string ids array and attach a click event - mobile hack
     for (var i = 0; i < trigger_button_ids.length; i++) {
-        document.getElementById(trigger_button_ids[i]).onclick = showModal(i + 1) {}
+        document.getElementById(trigger_button_ids[i]).onclick = showModal(i + 1);
     }
 
 
