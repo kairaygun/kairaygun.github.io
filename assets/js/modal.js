@@ -6,20 +6,11 @@ window.onload = function() {
     // Retrieve all the sections under main
     var section = document.getElementsByClassName("container-section");
     var original_section = section[0].className;
+    
 
-    /*
-    // Store trigger button string ids inside an array - mobile hack
-    var trigger_button_ids = [];
-    for (var i = 0; i < elements.length; i++) {
-        trigger_button_ids[i] = (i + 1) + "modal-button";
-    }
-
-    // Loop through trigger button string ids array and attach a click event - mobile hack
-    for (var i = 0; i < trigger_button_ids.length; i++) {
-        document.getElementById(trigger_button_ids[i]).onclick = showModal(i + 1);
-    }
-    */
-
+    /*******************/
+    /** Modal display **/
+    /*******************/
 
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", bindClick(i));
@@ -31,19 +22,7 @@ window.onload = function() {
         };
      }
 
-    /*
-    // Loop through all the modal trigger buttons
-    for (var i = 0; i < elements.length; i++) {
-        // Add a click event listener to each button
-        elements[i].addEventListener('click', showModal, false);
-        // Attach an index parameter to each button
-        elements[i].myParam = i + 1;
-    }
-    */
-
     function showModal(e) {
-
-        /** Modal display **/
 
         // Index attached to the passed button element of the function
         //var idx = e.target.myParam;
@@ -72,16 +51,6 @@ window.onload = function() {
         // Get the current <span> element (x)
         var span_modal = document.getElementsByClassName("close-modal")[idx - 1];
 
-        /*
-        // On button click ''>>' 
-        button_modal.onclick = function() {
-            console.log("clicking clicking");
-            // Opens the modal
-            modal.style.display = "block";
-            // Blurs the background
-            section[0].className += " open-modal";
-        }*/
-
         // On button click <span> (x)
         span_modal.onclick = function() {
             // Closes the modal
@@ -100,7 +69,10 @@ window.onload = function() {
             }
         }
 
+
+        /*********************/
         /** Modal slideshow **/
+        /*********************/
 
         try {
             // Get the images for slideshows
@@ -155,7 +127,5 @@ window.onload = function() {
         } catch (e) {
             console.log(e instanceof TypeError); // true
         }
-
     };
-
 };
