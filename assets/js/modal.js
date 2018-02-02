@@ -1,19 +1,19 @@
 window.onload = function() {
 
     // Retrieve all the modal trigger buttons
-    var elements = document.getElementsByClassName("modal-button");
+    var modalTriggers = document.getElementsByClassName("modal-button");
 
-    // Retrieve all the sections under main
-    var section = document.getElementsByClassName("container-section");
-    var original_section = section[0].className;
+    // Retrieve the container section under main
+    var mainSection = document.getElementsByClassName("container-section")[0];
+
     
 
     /*******************/
     /** Modal display **/
     /*******************/
 
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener("click", bindClick(i));
+    for (var i = 0; i < modalTriggers.length; i++) {
+        modalTriggers[i].addEventListener("click", bindClick(i));
      }
 
      function bindClick(i) {
@@ -25,38 +25,33 @@ window.onload = function() {
     function showModal(e) {
 
         // Index attached to the passed button element of the function
-        //var idx = e.target.myParam;
         var idx = e;
-        console.log(e);
 
         // Variables for referencing the content of each post
-        var modal_id = idx + "modal";
-        var button_id = idx + "modal-button";
-        var slideshow_class = idx + "slideshow-content";
+        var modalId = idx + "modal";
+        var buttonId = idx + "modal-button";
 
         // Get the current modal
-        var modal = document.getElementById(modal_id);
+        var modal = document.getElementById(modalId);
 
         // Get the current trigger button for the modal
-        var button_modal = document.getElementById(button_id);
-
-        console.log("clicking clicking");
+        var buttonModal = document.getElementById(buttonId);
         
         // Opens the modal
         modal.style.display = "block";
             
         // Blurs the background
-        section[0].className += " open-modal";
+        mainSection.className += " open-modal";
 
         // Get the current <span> element (x)
-        var span_modal = document.getElementsByClassName("close-modal")[idx - 1];
+        var spanModal = document.getElementsByClassName("close-modal")[idx - 1];
 
         // On button click <span> (x)
-        span_modal.onclick = function() {
+        spanModal.onclick = function() {
             // Closes the modal
             modal.style.display = "none";
             // Unblurs the background
-            section[0].className = original_section;
+            mainSection.className = "container-section";
         }
 
         // On button click anywhere outside of the modal
@@ -65,7 +60,7 @@ window.onload = function() {
                 // Closes the modal
                 modal.style.display = "none";
                 // Unblurs the background
-                section[0].className = original_section;
+                mainSection.className = "container-section";
             }
         }
 
@@ -74,24 +69,27 @@ window.onload = function() {
         /** Modal slideshow **/
         /*********************/
 
+        //  For referencing the content of each post including the modal
+        var slideshowClass = idx + "slideshow-content";
+
         try {
             // Get the images for slideshows
-            var images_slideshow_all = document.getElementsByClassName(slideshow_class)[0].children;
+            var imagesSlideshow = document.getElementsByClassName(slideshowClass)[0].children;
 
              // Set the image slideshow index to 0
-            var idx_slideshow = 0;
+            var i = 0;
             
             // Loop through images and display the first image and hide the rest
-            for (idx_slideshow; idx_slideshow < images_slideshow_all.length; idx_slideshow++) {
-                if (idx_slideshow === 0) {
-                    images_slideshow_all[idx_slideshow].style.display = "block";
+            for (i; i < imagesSlideshow.length; i++) {
+                if (i === 0) {
+                    imagesSlideshow[i].style.display = "block";
                 } else {
-                    images_slideshow_all[idx_slideshow].style.display = "none";
+                    imagesSlideshow[i].style.display = "none";
                 }
             }
 
             // Set the image slideshow index to 0 again after looping
-            idx_slideshow = 0;
+            i = 0;
 
             // Get the next button for the slideshow
             var next = document.getElementsByClassName("next")[idx - 1];
@@ -102,26 +100,26 @@ window.onload = function() {
             // On button next click, go to the next slideshow
             next.onclick = function () {
                 // Do not increase more than the ending index
-                if (idx_slideshow < images_slideshow_all.length - 1) {
+                if (i < imagesSlideshow.length - 1) {
                     // Hide the current image
-                    images_slideshow_all[idx_slideshow].style.display = "none";
+                    imagesSlideshow[i].style.display = "none";
 
                     // Increase the index to show the next image
-                    idx_slideshow = idx_slideshow + 1;
-                    images_slideshow_all[idx_slideshow].style.display = "block";
+                    i = i + 1;
+                    imagesSlideshow[i].style.display = "block";
                 }
             }
 
             // On button prev click, go to the previous slideshow
             prev.onclick = function () {
                 // Do not decrease less than the starting index
-                if (idx_slideshow > 0) {
+                if (i > 0) {
                     // Hide the current image
-                    images_slideshow_all[idx_slideshow].style.display = "none";
+                    imagesSlideshow[i].style.display = "none";
 
                     // Decrease the index to show the previous image
-                    idx_slideshow = idx_slideshow - 1;
-                    images_slideshow_all[idx_slideshow].style.display = "block";
+                    i = i - 1;
+                    imagesSlideshow[i].style.display = "block";
                 }
             }
         } catch (e) {
