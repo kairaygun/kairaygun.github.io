@@ -61,9 +61,18 @@ window.onload = function() {
         // Get the current trigger button for the modal
         var button_modal = document.getElementById(button_id);
 
+        console.log("clicking clicking");
+        
+        // Opens the modal
+        modal.style.display = "block";
+            
+        // Blurs the background
+        section[0].className += " open-modal";
+
         // Get the current <span> element (x)
         var span_modal = document.getElementsByClassName("close-modal")[idx - 1];
 
+        /*
         // On button click ''>>' 
         button_modal.onclick = function() {
             console.log("clicking clicking");
@@ -71,7 +80,7 @@ window.onload = function() {
             modal.style.display = "block";
             // Blurs the background
             section[0].className += " open-modal";
-        }
+        }*/
 
         // On button click <span> (x)
         span_modal.onclick = function() {
