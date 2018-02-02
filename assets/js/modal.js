@@ -8,6 +8,7 @@ window.onload = function() {
     var original_section = section[0].className;
 
     // Store trigger button string ids inside an array - mobile hack
+    /*
     var trigger_button_ids = [];
     for (var i = 0; i < elements.length; i++) {
         trigger_button_ids[i] = (i + 1) + "modal-button";
@@ -17,6 +18,7 @@ window.onload = function() {
     for (var i = 0; i < trigger_button_ids.length; i++) {
         document.getElementById(trigger_button_ids[i]).onclick = function () {}
     }
+    */
 
     // Loop through all the modal trigger buttons
     for (var i = 0; i < elements.length; i++) {
