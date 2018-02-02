@@ -93,10 +93,9 @@
    close button */
 .close-modal:hover,
 .close-modal:focus {
-    color: $green-color;
+    color: $yellow-color;
     cursor: pointer;
     text-decoration: none;
-    text-shadow: 2px 2px 2px $yellow-color;
 }
 
 /* Slideshow Container */
