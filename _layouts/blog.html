@@ -12,8 +12,8 @@
                     <h2>
                         {{ post.title }}
                     </h2>
-                    <button id="{{ "modal-button" | prepend: forloop.index }}" class="modal-button">
-                        >>
+                    <button class="modal-button">
+                        <i id="{{ "-modal-button" | prepend: forloop.index }}" class="fas fa-angle-double-right"></i>
                     </button>
                     <p>{{ post.date}}</p>
                 </div>
@@ -24,8 +24,8 @@
         <!-- Modal Section -->
         <section class="modal-section">
             {% for post in site.categories.blog %}
-                <div id="{{ "modal" | prepend: forloop.index }}" class="modals">
-                    <div class="modal-content">
+                <div id="{{ "-modal" | prepend: forloop.index }}" class="modals">
+                    <div class="modal-content modal-effect">
                         <h4 class="close-modal">&times;</h4>
                         <h2>{{ post.title }}</h2>
                         <p>{{ post.content }}</p>
@@ -36,4 +36,5 @@
     </main>
     {% include footer.html %}
 </body>
+<script src="/assets/js/modal.js"></script>
 </html>

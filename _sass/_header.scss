@@ -4,10 +4,8 @@
    the whole screen */
 header {
     background-color: $black-color;
-    background-image: url('https://www.alienuniverse.com/assets/site/images/bg_missions.jpg');
     background-size: cover;
     box-shadow: 0 5px 10px -5px $black-color;
-    height: 100vh;
     margin: 0;
 
     /* Overrides default H1 values under 

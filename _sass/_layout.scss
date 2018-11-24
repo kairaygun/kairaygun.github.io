@@ -7,8 +7,13 @@ html {
 
     /* Adds a grainy texture to the overall background */
     body {
-        background-image: url('https://www.transparenttextures.com/patterns/otis-redding.png');
         min-height: 100%;
+        -ms-overflow-style: none;  // IE 10+ - hide scrollbar
+        overflow: -moz-scrollbars-none;  // Firefox - hide scrollbar
+
+        &::-webkit-scrollbar { 
+           display: none;  // Safari and Chrome - hide scrollbar
+        }
 
         /* Maintains the margins of the main content */
         main {

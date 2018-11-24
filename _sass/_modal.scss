@@ -11,6 +11,27 @@
     top: 0;
     width: 100%;           /* Full width */
     z-index: 2;            /* Sit on top */
+    -ms-overflow-style: none;        // IE 10+ - hides scrollbar
+    overflow: -moz-scrollbars-none;  // Firefox - hides scrollbar
+    &::-webkit-scrollbar { 
+        display: none;               // Safari and Chrome - hides scrollbar
+    }
+}
+
+.modal-effect {
+    opacity: 0;
+}
+
+.modal-effect-show {
+    animation-name: modal-animation;
+    animation-duration: 0.2s;    
+    animation-fill-mode: forwards;
+}
+
+/* Standard syntax */
+@keyframes modal-animation {
+    0%   { -webkit-transform: scale(0.20); -moz-transform: scale(0.20); -ms-transform: scale(0.20); transform: scale(0.20); opacity: 0.00; }
+    100% { -webkit-transform: scale(1.00); -moz-transform: scale(1.00); -ms-transform: scale(1.00); transform: scale(1.00); opacity: 1.00; }
 }
 
 /* Modal Content */
@@ -20,8 +41,8 @@
     box-shadow: 2px 2px 7px 2px $black-color;
     margin: auto;
     padding: 10px;
-    width: 300px;
     vertical-align: top;
+    margin-bottom: 150px;
 
     /* Desktop width defaults */
     @media screen and (min-width: 700px) {
@@ -34,7 +55,7 @@
         font-family: CallingCode;
         font-size: 20px;
         line-height: 30px;
-        padding: 15px 0 15px 0;
+        padding: 30px;
         word-spacing: 1.6px;
         word-break: break-word;
     }
@@ -76,17 +97,17 @@
 
 /* Modal Close Button */
 .close-modal {
-    color: $yellow-color;
+    color: $dark-gray-color;
     display: table-cell;
     float: right;
     font-size: 40px;
     font-weight: bold;
-    position: sticky;
-    position: -webkit-sticky;
     text-align: center;
     top: 10px;
     vertical-align: middle;
     z-index: 3;
+    background-color: $white-color;
+    padding: 0px 8px;
 }
 
 /* On hover, change the color of (x) 
@@ -103,6 +124,10 @@
     margin: auto;
     max-width: 1000px;
     position: relative;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 300px;
 }
 
 /* Slideshow Next & Previous Buttons */
@@ -119,11 +144,11 @@
     top: 50%;
     transition: 0.6s ease;
     width: auto;
+    outline:  none;
 }
 
 /* Next (>) button position to the right */
 .next {
-    border-radius: 3px 0 0 3px;
     right: 0;
 }
 
