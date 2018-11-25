@@ -2,43 +2,27 @@
 
 /* Main Modal */
 .modals {
-    display: none;         /* Hidden by default */
-    height: 100%;          /* Full height */
+    display: none; 
+    height: 100%;
     left: 0;
-    overflow: auto;        /* Enable scroll if needed */
-    padding-top: 100px;    /* Location of the box */
-    position: fixed;       /* Stay in place */
+    overflow: auto;
+    padding-top: 100px;
+    position: fixed;
     top: 0;
-    width: 100%;           /* Full width */
-    z-index: 2;            /* Sit on top */
-    -ms-overflow-style: none;        // IE 10+ - hides scrollbar
-    overflow: -moz-scrollbars-none;  // Firefox - hides scrollbar
-    &::-webkit-scrollbar { 
-        display: none;               // Safari and Chrome - hides scrollbar
+    width: 100%;
+    z-index: 2;
+    -ms-overflow-style: none;       // IE 10+ - hides scrollbar
+    overflow: -moz-scrollbars-none; // Firefox - hides scrollbar
+    &::-webkit-scrollbar {
+        display: none; // Safari and Chrome - hides scrollbar
     }
-}
-
-.modal-effect {
-    opacity: 0;
-}
-
-.modal-effect-show {
-    animation-name: modal-animation;
-    animation-duration: 0.2s;    
-    animation-fill-mode: forwards;
-}
-
-/* Standard syntax */
-@keyframes modal-animation {
-    0%   { -webkit-transform: scale(0.20); -moz-transform: scale(0.20); -ms-transform: scale(0.20); transform: scale(0.20); opacity: 0.00; }
-    100% { -webkit-transform: scale(1.00); -moz-transform: scale(1.00); -ms-transform: scale(1.00); transform: scale(1.00); opacity: 1.00; }
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: $dark-gray-color;
+    background-color: $white-color;
     background-size: cover;
-    box-shadow: 2px 2px 7px 2px $black-color;
+    box-shadow: 0px 3px 5px $dirty-white-color;
     margin: auto;
     padding: 10px;
     vertical-align: top;
@@ -49,20 +33,26 @@
         width: 60%;
     }
 
+    .modal-title {
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 2px solid #636363;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
     /* Overrides paragraph in fonts.scss */
     p {
-        color: $dirty-white-color;
-        font-family: CallingCode;
-        font-size: 20px;
         line-height: 30px;
         padding: 30px;
-        word-spacing: 1.6px;
-        word-break: break-word;
+        max-width: 600px;
+        text-align: justify;
+        margin: 0 auto;
     }
 
     li {
         color: $dirty-white-color;
-        font-family: $callingcode-font;
+        font-family: $roboto-font;
         font-size: 15px;
         line-height: 17px;
         padding: 15px 0 15px 0;
@@ -73,7 +63,7 @@
 .modal-button {
     background-color: transparent;
     border-style: none;
-    color: $yellow-color;
+    color: $black-color;
     cursor: pointer;
     font-family: $vcr-font;
     padding: 0px 0px 10px 0px;
@@ -81,7 +71,7 @@
 
 .modal-button:hover,
 .modal-button:focus {
-    color: $green-color;
+    color: $black-color;
     cursor: pointer;
 }
 
@@ -114,48 +104,7 @@
    close button */
 .close-modal:hover,
 .close-modal:focus {
-    color: $green-color;
+    color: $black-color;
     cursor: pointer;
     text-decoration: none;
-}
-
-/* Slideshow Container */
-.slideshow-container {
-    margin: auto;
-    max-width: 1000px;
-    position: relative;
-    max-width: 300px;
-    min-width: 300px;
-    max-height: 300px;
-    min-height: 300px;
-}
-
-/* Slideshow Next & Previous Buttons */
-.prev, .next {
-    color: $white-color;
-    cursor: pointer;
-    background-color: $dark-gray-color;
-    border-style: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: -22px;
-    padding: 16px;
-    position: absolute;
-    top: 50%;
-    transition: 0.6s ease;
-    width: auto;
-    outline:  none;
-}
-
-/* Next (>) button position to the right */
-.next {
-    right: 0;
-}
-
-/* On hover, change background color of
-   next (>) and previous (<) buttons */
-.prev:hover, .next:hover {
-    background-color: $white-color;
-    color: $black-color;
-    opacity: 0.2;
 }

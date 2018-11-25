@@ -2,6 +2,8 @@
 title: Reflections from the Underground Columbia Web Development Lair
 categories: blog
 date: March 17, 2016
+layout: blog-post
+permalink: /blog/:title
 --- 
 
 One week from now, it will be March 25th, which marks the day last year when I submitted my application to Columbia College Information Technology (CCIT). Before interning at CCIT, I was roughly prototyping static websites and CMS (content management systems) were foreign; handling the bare-bones functionality of WordPress was the extent of my knoweldge in CMS. CCIT's development stack is wrapped around Drupal, an open-source CMS. When I thought of Drupal then, I rememeber words like <em>open-source</em> and <em>CMS</em> that hoisted a sense of caliber, but these are merely technical jargon and nothing more. Instilling prestige in software or culture is unheatlhy, and I'm glad I broke this pattern of thought before it broke me down. Having said that, the experiece I had at CCIT was irreplaceable and valuable.

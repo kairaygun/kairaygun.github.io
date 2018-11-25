@@ -2,7 +2,7 @@
 
 /* Sets initial background color with a gradient */
 html {
-    background-color: $dark-green-color;
+    background-color: $white-color;
     height: 100%;
 
     /* Adds a grainy texture to the overall background */
@@ -15,16 +15,22 @@ html {
            display: none;  // Safari and Chrome - hide scrollbar
         }
 
+        header {
+            margin-top: 40px;
+        }
+
         /* Maintains the margins of the main content */
         main {
             margin-bottom: 20px;
-            margin-top: 60px;
+            margin-top: 80px;
 
             /* Default sizing for images in main */
             img {
                 width: 100%;
-                padding-top: 15px;
+                height: 100%;
+                object-fit: cover;
             }
+
 
             /* Container for single columns in main 
                Used for the blog index mobile */
@@ -32,10 +38,51 @@ html {
                 padding: 4px;
                 text-align-last: center;
 
+                &.card {
+                    .one-section-content {
+                        max-width: 350px;
+                        max-height: 300px;
+                        background-color: $dirty-white-color;
+                        box-shadow: 2px 2px 0px #eee;
+                        margin: 0 auto;
+                        text-align-last: left;
+                        padding: 10px;
+                        position: relative;
+                        overflow: hidden;
+                        h2 {
+                            visibility: hidden;
+                            position: absolute;
+                            bottom: -20px;
+                            transition: all .1s ease-out;
+                            background-color: $dirty-white-color;
+                            padding: 15px;
+                            border-top-right-radius: 3px;
+                            font-size: 12px;
+                            font-weight: 800;
+                            letter-spacing: 1.1px;
+                            text-transform: uppercase;
+                        }
+                        img {
+                            opacity: 0.4;
+                            border-radius: 3px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            img {
+                                opacity: 1;
+                            }
+                            h2 {
+                                visibility: visible;
+                                bottom: 5px;
+                            }
+                        }
+                    }
+                }
+
                 /* Organizes content display of single column 
                    Default for mobile */
                 .one-section-content {
-                    background-color: $dark-green-color;
+                    background-color: $dark-gray-color;
                     box-shadow: 2px 2px 8px $black-color;
                     margin: 0 auto;
                     padding-left: 2px;

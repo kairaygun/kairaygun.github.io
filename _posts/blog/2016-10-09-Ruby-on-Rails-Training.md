@@ -2,6 +2,8 @@
 title: Ruby on Rails Training for Free
 categories: blog
 date: October 9, 2016
+layout: blog-post
+permalink: /blog/:title
 ---
 
 There are many ways to approach learning <strong>Ruby on Rails</strong> and this is one of many. I'm also a firm believer that education should be <em>free</em> and I cringe whenever I think about the Catch-22s and underpinning of the current tech hype. Learning a skillset requires a sustainable income to buy a seat into a programming bootcamp with neck-breathing mentoring. Mostly everyone from the middle and working class can't afford to <em>not</em> work. Hence, I'm curating this with <strong>free</strong> resources alone. Don't spend a penny on the same resource that's packaged differently.

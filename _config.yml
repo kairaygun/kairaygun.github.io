@@ -32,6 +32,8 @@ sass:
     sass_dir: _sass
 plugins:
   - jekyll-feed
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

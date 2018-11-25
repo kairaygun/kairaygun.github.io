@@ -1,12 +1,9 @@
 const container = document.querySelector('.container-section');
 container.addEventListener('click', (event) => {
-    if (event.toElement.nodeName === 'I') {
-        console.log("yay");
+    if (event.toElement.nodeName === 'IMG') {
         openModal(event.target.id);
-    } else {
-        console.log("run");
     }
-}, false);
+}, true);
 
 
 function openModal(index) {

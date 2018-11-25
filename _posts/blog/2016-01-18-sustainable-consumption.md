@@ -2,6 +2,8 @@
 title: Sustainable Consumption
 categories: blog
 date: January 18, 2016
+layout: blog-post
+permalink: /blog/:title
 ---
 
 Ahh... 21<sup>st</sup> century living. Calling someone from a remote location without access to local landline used to be a privilege almost two decades ago. Communication is now instant, and this opens up more resources for exchanging information. I used to wait for hours listening to the radio with a pen and paper ready at hand, and when that "one" song finally comes up, I jotted down the lyrics as fast as I can to catch the lyrics. Today, I can browse through a list of songs that have been broadcasted. Convenience drives the marketplace, and who knew that such convenience can fit in a pocket.
