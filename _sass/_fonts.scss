@@ -20,6 +20,7 @@ $roboto-font: Roboto;
 $niramit-font: Niramit;
 $vcr-font: VCR;
 
+
 header {
     h1 {
         color: $dirty-white-color;
@@ -69,6 +70,17 @@ header {
 /* Default Main Styles */
 main {
 
+    a {
+        color: $dark-gray-color;
+        text-decoration: none;
+        font-family: $roboto-font;
+        font-weight: 600; 
+        &:hover {
+            color: $black-color;
+        }  
+    }
+
+
     /* H1 - Used for labeling a section
         i.e. projects, navigation, intro
         */
@@ -86,7 +98,8 @@ main {
     h2 {
         color: $dark-gray-color;
         font-family: $roboto-font;
-        font-size: 15px;
+        font-size: 18px;
+        margin: 10px 0px;
     }
 
     /* H3 - Used within the post to organize content
@@ -112,10 +125,11 @@ main {
     p {
         color: $dark-gray-color;
         font-family: $roboto-font;
-        font-size: 16px;
+        font-size: 14px;
         padding-bottom: 15px;
         word-spacing: 1.6px;
         word-break: break-word;
+        line-height: 25px;
     }
 
 
@@ -133,6 +147,12 @@ main {
         white-space: -pre-wrap;
         white-space: -o-pre-wrap;
         word-wrap: break-word;
+    }
+
+    li {
+        color: $dark-gray-color;
+        font-size: 16px;
+        font-family: $roboto-font;
     }
 }
 

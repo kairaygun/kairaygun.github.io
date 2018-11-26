@@ -1,6 +1,6 @@
 const container = document.querySelector('.container-section');
 container.addEventListener('click', (event) => {
-    if (event.toElement.nodeName === 'IMG') {
+    if (event.toElement.nodeName === 'IMG' && event.toElement.className === 'image-portfolio') {
         openModal(event.target.id);
     }
 }, true);

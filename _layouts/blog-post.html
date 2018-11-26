@@ -1,11 +1,14 @@
 {% include head.html %}
 <body>
+   {% include navigation.html %}
     <main id="main">
         <h1>KAIRA'S THOUGHTS<span class="blink">_</span></h1>
-
-        <!-- Main Section -->
         <section class="container-section">
-            {{ content }}
+        	<div class="one-section-container blog-post">
+                <div class="one-section-content">
+		            {{ content }}
+                </div>
+        	</div>
         </section>
     </main>
     {% include footer.html %}

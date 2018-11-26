@@ -1,7 +1,8 @@
 {% include head.html %}
 <body>
+    {% include navigation.html %}
     <main id="main">
-        <h1>KAIRA'S THOUGHTS<span class="blink">_</span></h1>
+        <h1>THOUGHTS<span class="blink">_</span></h1>
 
         <!-- Main Section -->
         <section class="container-section">
@@ -11,10 +12,7 @@
                     <h2><a href="{{ post.url }}">
                         {{ post.title }}
                     </a></h2>
-                    <button class="modal-button">
-                        <i id="{{ "-modal-button" | prepend: forloop.index }}" class="fas fa-angle-double-right"></i>
-                    </button>
-                    <p>{{ post.date}}</p>
+                    <h3>{{ post.date | date_to_string }}</h3>
                 </div>
             </div>
             {% endfor %}

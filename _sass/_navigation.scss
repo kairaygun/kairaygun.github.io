@@ -2,55 +2,31 @@
 
 /* Main Navigation*/
 nav {
-    background-color: $black-color;
-    box-shadow: 0 5px 6px -5px $black-color;
-    height: 30px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-
-    /* Dropdown Navigation*/
-    .dropdown-nav {
-        display: inline-block;
-        padding-top: 5px;
-        padding-left: 10px;
-        position: relative;
-
-        /* Dropdown Button */
-        .dropbtn-nav {
-            background-color: transparent;
-            border: none;
-            color: $white-color;
-            cursor: pointer;
-        }
-
-        /* Dropdown Content */
-        .dropdown-nav-content {
-            display: none;
-            min-width: 160px;
-            position: absolute;
-            a {
-                color: $white-color;
-                display: block;
-                font-family: $vcr-font;
-                padding: 12px 16px;
-                text-decoration: none;
-                text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+    .navigation-items {
+        margin-right: 20px;
+        display: flex;
+        .nav-item {
+            background-color: $light-gray-color;
+            color: $dark-gray-color;
+            padding: 20px;
+            &:first-child {
+                border-bottom-left-radius: 3px;
             }
-            a:hover {
-                opacity: 0.3;
+            &:last-child {
+                border-bottom-right-radius: 3px;
             }
-        }
-    }
-
-    /* Dropwdown Hover */
-    .dropdown-nav:hover {
-        .dropdown-nav-content {
-            display: block;
-        }
-        .dropbtn-nav {
-            opacity: 0.3;
+            &:hover {
+                cursor: pointer;
+                background-color: $dark-gray-color;
+                color: $light-gray-color;
+            }
         }
     }
 }

@@ -30,12 +30,19 @@ footer {
                     color: $dark-gray-color;
                     padding: 8px;
                     border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     &:hover {
                         background-color: $dark-gray-color;
                         color: $light-gray-color;
                         cursor: pointer;
                     }
                 }
+            }
+
+            h6 {
+                margin-bottom: 2px;
             }
 
             @media screen and (min-width: 600px) {
