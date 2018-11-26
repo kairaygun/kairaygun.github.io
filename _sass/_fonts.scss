@@ -39,7 +39,7 @@ header {
         font-weight: bolder;
         line-height: 25px;
         background: aliceblue;
-        box-shadow: 0 2px 4px #eee;
+        box-shadow: 0 2px 4px $light-shadow-color;
         position: relative;
 
         &:first-child {
