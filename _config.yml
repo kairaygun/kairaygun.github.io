@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Kaira Villanueva
-email: your-email@example.com
+email: fzf.villanueva@gmail.com
 description: Kaira Villanueva Portfolio - Software Engineer & Artist
 baseurl: "http://kairaygun.github.io"
 localhost: 4000
@@ -32,6 +32,8 @@ sass:
     sass_dir: _sass
 plugins:
   - jekyll-feed
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

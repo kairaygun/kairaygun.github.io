@@ -2,6 +2,8 @@
 title: Sending Emails With Mandrill and Mailgun API
 categories: blog
 date: March 01, 2016
+layout: blog-post
+permalink: /blog/:title
 ---
 
 I don't want to use Apple's <a href="https://developer.apple.com/library/ios/documentation/MessageUI/Reference/MFMailComposeViewController_class/">MFMailComposeViewController</a>, since this has a custom view controller that swerves away from my application's user interface. I want to send emails immediately with one press, similar to a newsletter, and not do it one by one. An alternate solution is Mailgun's API. I used Mandrill separately for the web version of the application.

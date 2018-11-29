@@ -5,14 +5,7 @@
    on color, margins, and sizing */
 
 footer {
-    background-color: $black-color;
-    box-shadow: 0 0 5px $white-color,
-    0 0 10px $white-color,
-    0 0 20px $yellow-color,
-    0 0 30px $green-color,
-    0 0 40px $green-color,
-    0 0 55px $green-color,
-    0 0 75px $green-color;
+    background-color: $white-color;
     display: flex;
     justify-content: center;
     height: 300px;
@@ -29,6 +22,28 @@ footer {
             display: block;
             padding: 5px;
             vertical-align: top;
+
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    background-color: $light-gray-color;
+                    color: $dark-gray-color;
+                    padding: 8px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover {
+                        background-color: $dark-gray-color;
+                        color: $light-gray-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            h6 {
+                margin-bottom: 2px;
+            }
 
             @media screen and (min-width: 600px) {
                 display: inline-block;

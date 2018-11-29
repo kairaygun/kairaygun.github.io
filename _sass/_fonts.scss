@@ -1,92 +1,143 @@
 /*** FONTS  ***/
 
 @font-face {
-    font-family: Alien;
-    src: url("../assets/fonts/alien.ttf");
-}
-
-@font-face {
     font-family: VCR;
-    src: url("../assets/fonts/vcr.ttf");
+    src: url("../assets/fonts/VCR/VCR-Medium.ttf");
 }
 
 @font-face {
-    font-family: Borgen;
-    src: url("../assets/fonts/borgen.otf");
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
-    font-family: CallingCode;
-    src: url("../assets/fonts/callingcode.ttf");
+    font-family: Niramit;
+    src: url("../assets/fonts/Niramit/Niramit-Regular.ttf");
 }
 
-$alien-font: Alien;
-$borgen-font: Borgen;
-$callingcode-font: CallingCode;
+
+$roboto-font: Roboto;
+$niramit-font: Niramit;
 $vcr-font: VCR;
+
+
+header {
+    h1 {
+        color: $dirty-white-color;
+        font-family: $vcr-font;
+        font-size: 36px;
+        padding-bottom: 15px;
+        text-shadow: 2px 2px 0px $dark-gray-color;
+        padding-left: 30px;
+    }
+
+    h2 {
+        color: black;
+        padding: 30px 30px;
+        max-width: 393px;
+        font-family: Roboto;
+        font-weight: bolder;
+        line-height: 25px;
+        background: aliceblue;
+        box-shadow: 0 2px 4px $light-shadow-color;
+        position: relative;
+
+        &:first-child {
+            &:hover {
+                cursor: pointer;
+
+                &+h2 {
+                    left: 0px;
+                }
+            }
+        }
+
+        &:last-child {
+            font-size: 9px;
+            text-transform: uppercase;
+            line-height: 13px;
+            background-color: ghostwhite;
+            font-weight: 400;
+            letter-spacing: 1.05px;
+            position: absolute;
+            left: -400px;
+            transition: all .1s ease-out;
+            padding: 15px 30px;
+        }
+    }
+}
 
 /* Default Main Styles */
 main {
+
+    a {
+        color: $dark-gray-color;
+        text-decoration: none;
+        font-family: $roboto-font;
+        font-weight: 600; 
+        &:hover {
+            color: $black-color;
+        }  
+    }
+
+
     /* H1 - Used for labeling a section
         i.e. projects, navigation, intro
         */
     h1 {
-        color: $white-color;
-        filter: blur(0.8px);
+        color: $dirty-white-color;
         font-family: $vcr-font;
         font-size: 36px;
         padding-bottom: 15px;
-        text-align: center;
-        text-shadow: 2px 2px 10px black;
+        text-shadow: 2px 2px 0px $dark-gray-color;
+        padding-left: 30px;
     }
+
     /* H2 - Used for labeling a posts's title
         i.e. blog title, project title  */
     h2 {
-        color: $white-color;
-        font-family: $vcr-font;
-        font-size: 24px;
-        padding: 15px 0 15px 0;
-        text-shadow: 2px 2px 10px black;
-    }
-    /* H3 - Used for meta data supporting a posts's title
-        i.e. dates,description */
-    h3 {
-        color: $white-color;
-        font-family: $vcr-font;
-        font-size: 20px;
-        padding: 15px 0 15px 0;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
+        font-size: 18px;
+        margin: 10px 0px;
     }
 
-    /* H4 - Used within the post to organize content
+    /* H3 - Used within the post to organize content
         i.e. Post: Foods -- "Breakfast", "Lunch" */
-    h4 {
-        font-family: $vcr-font;
+    h3 {
+        color: $dark-gray-color;
+        font-family: $roboto-font;
+        color: #636363;
+        padding: 15px 0 15px 0;
+        text-transform: uppercase;
         font-size: 14px;
+        letter-spacing: 4px;
     }
 
-    /* H6 - Used for additional description
+    /* H5 - Used for additional description
         "THIS IMAGE IS FROM [SOURCE]" */
-    h6 {
-        font-family: $vcr-font;
+    h5 {
+        font-family: $roboto-font;
         font-size: 8px;
     }
 
     /* P - Used for the body of a content */
     p {
-        color: $white-color;
-        font-family: $callingcode-font;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
         font-size: 14px;
-        line-height: 17px;
         padding-bottom: 15px;
-        text-align-last: left;
-        text-shadow: 2px 2px 2px $black-color;
+        word-spacing: 1.6px;
+        word-break: break-word;
+        line-height: 25px;
     }
+
 
     /* Pre - Used for displaying code */
     pre {
         color: #fff;
         background-color: #323834;
-        font-family: CallingCode;
+        font-family: $roboto-font;
         font-size: 14px;
         line-height: 17px;
         margin: 15px 0 15px 0;
@@ -97,34 +148,40 @@ main {
         white-space: -o-pre-wrap;
         word-wrap: break-word;
     }
+
+    li {
+        color: $dark-gray-color;
+        font-size: 16px;
+        font-family: $roboto-font;
+    }
 }
 
 /* Default Footer Styles */
 footer {
+
     /* H5 - Used for footer copyright
         i.e. Kaira Villanueva (c) */
     h5 {
-        color: $white-color;
-        font-family: $callingcode-font;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
         font-size: 12px;
         padding: 8px 0 8px 0;
-        text-shadow: 2px 2px 10px black;
         text-transform: uppercase;
     }
 
     /* H6 - Used for footer author names 
         i.e. Kaira Villanueva */
     h6 {
-        color: $white-color;
-        font-family: $callingcode-font;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
         font-size: 10px;
         text-transform: uppercase;
     }
 
     /* P - Used for for brief bio */
     p {
-        color: $white-color;
-        font-family: $callingcode-font;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
         font-size: 12px;
         padding: 8px 0 8px 0;
         width: 250px;
@@ -133,7 +190,7 @@ footer {
     /* UL - Used for footer font-awesome icons
         i.e. Github icon */
     ul {
-        color: $white-color;
-        font-family: $borgen-font;
+        color: $dark-gray-color;
+        font-family: $roboto-font;
     }
 }
