@@ -2,7 +2,7 @@
 
 /* Main Modal */
 .modals {
-    display: none; 
+    display: none;
     height: 100%;
     left: 0;
     overflow: auto;
@@ -11,8 +11,9 @@
     top: 0;
     width: 100%;
     z-index: 2;
-    -ms-overflow-style: none;       // IE 10+ - hides scrollbar
+    -ms-overflow-style: none; // IE 10+ - hides scrollbar
     overflow: -moz-scrollbars-none; // Firefox - hides scrollbar
+
     &::-webkit-scrollbar {
         display: none; // Safari and Chrome - hides scrollbar
     }
@@ -39,6 +40,14 @@
         border-bottom: 2px solid #636363;
         margin-bottom: 30px;
         padding: 20px;
+    }
+
+    .tools {
+        font-weight: 700;
+        display: block;
+        border-bottom: 1px solid;
+        padding-bottom: 1px;
+        margin-bottom: 10px;
     }
 
     p {
