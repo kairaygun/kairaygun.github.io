@@ -59,10 +59,10 @@ html {
                         box-shadow: 2px 2px 0px #eeeeee;
                         margin: 0 auto;
                         text-align-last: left;
-                        padding: 10px;
                         position: relative;
                         overflow: hidden;
-
+                        border: 8px solid aliceblue;
+                        border-radius: 2px;
                         h2 {
                             position: absolute;
                             bottom: 0;
@@ -78,10 +78,13 @@ html {
                             border-right: solid 5px #c2c2c2;
                             border-color: #d7e2eb;
                             border-right-color: #9ca7b1;
+                            margin-bottom: 0;
                         }
+
                         img {
                             border-radius: 3px;
                         }
+
                         &:hover {
                             box-shadow: 0 4px 10px #ddd;
                             cursor: pointer;
