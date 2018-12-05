@@ -11,19 +11,16 @@ footer {
     height: 300px;
     margin-top: 5em;
     width: 100%;
-
-    /* Organizes the display of footer content and
-       list elements to behave responsively  */
     .footer-container {
         margin: 20px 0 10px 0;
-
-        /* Mobile default display */
+        display: flex;
+        flex-direction: column;
         .footer-content {
             display: block;
             padding: 5px;
             vertical-align: top;
-
             ul {
+                display: flex;
                 li {
                     margin-bottom: 5px;
                     background-color: $light-gray-color;
@@ -33,6 +30,12 @@ footer {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 5px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
                     &:hover {
                         background-color: $dark-gray-color;
                         color: $light-gray-color;
@@ -40,11 +43,9 @@ footer {
                     }
                 }
             }
-
             h6 {
                 margin-bottom: 2px;
             }
-
             @media screen and (min-width: 600px) {
                 display: inline-block;
                 padding: 5px 10px 5px 5px;
