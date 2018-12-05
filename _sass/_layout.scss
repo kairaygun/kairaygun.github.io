@@ -16,7 +16,14 @@ html {
         }
 
         header {
-            margin-top: 40px;
+            background-color: aliceblue;
+            padding: 50px 0;
+
+            .subheader {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 10px 20px;
+            }
         }
 
         /* Maintains the margins of the main content */
@@ -37,7 +44,7 @@ html {
             .one-section-container {
                 padding: 4px;
                 text-align-last: center;
-
+                margin-bottom: 50px;
                 &.blog-post {
                     img {
                         max-width: 600px;
@@ -50,26 +57,29 @@ html {
                         box-shadow: 0 1px 1px #ddd;
                     }
                 }
-
                 &.card {
                     .one-section-content {
                         max-width: 350px;
                         max-height: 300px;
                         background-color: aliceblue;
-                        box-shadow: 2px 2px 0px #eeeeee;
                         margin: 0 auto;
                         text-align-last: left;
                         position: relative;
                         overflow: hidden;
-                        border: 8px solid aliceblue;
                         border-radius: 2px;
+                        border-top: 15px solid;
+                        border-right: 11px solid;
+                        border-right-color: #e0e0e0;
+                        border-top-color: aliceblue;
+                        border-bottom-right-radius: 0px;
+                        border-top-left-radius: 15px;
+                        border-bottom-right-radius: 17px;
                         h2 {
                             position: absolute;
                             bottom: 0;
                             background-color: #ffffff;
-                            padding: 15px;
+                            padding: 10px;
                             border-top-right-radius: 3px;
-                            font-size: 12px;
                             font-weight: 800;
                             letter-spacing: 1.1px;
                             text-transform: uppercase;
@@ -79,12 +89,8 @@ html {
                             border-color: #d7e2eb;
                             border-right-color: #9ca7b1;
                             margin-bottom: 0;
+                            font-size: 11px;
                         }
-
-                        img {
-                            border-radius: 3px;
-                        }
-
                         &:hover {
                             box-shadow: 0 4px 10px #ddd;
                             cursor: pointer;

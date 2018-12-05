@@ -23,7 +23,7 @@ $vcr-font: VCR;
 
 header {
     h1 {
-        color: $dirty-white-color;
+        color: #aaa6b2;
         font-family: $vcr-font;
         font-size: 36px;
         padding-bottom: 15px;
@@ -31,45 +31,17 @@ header {
         padding-left: 30px;
     }
 
-    h2 {
-        color: black;
-        padding: 30px 30px;
-        max-width: 393px;
+    p {
+        color: #828282;
         font-family: Roboto;
-        font-weight: bolder;
         line-height: 25px;
-        background: aliceblue;
-        box-shadow: 0 2px 4px $light-shadow-color;
-        position: relative;
-
-        &:first-child {
-            &:hover {
-                cursor: pointer;
-
-                &+h2 {
-                    left: 0px;
-                }
-            }
-        }
-
-        &:last-child {
-            font-size: 9px;
-            text-transform: uppercase;
-            line-height: 13px;
-            background-color: ghostwhite;
-            font-weight: 400;
-            letter-spacing: 1.05px;
-            position: absolute;
-            left: -400px;
-            transition: all .1s ease-out;
-            padding: 15px 30px;
-        }
+        font-size: 20px;
+        line-height: 36px;
+        margin-bottom: 20px;
     }
 }
 
-/* Default Main Styles */
 main {
-
     a {
         color: $dark-gray-color;
         text-decoration: none;
