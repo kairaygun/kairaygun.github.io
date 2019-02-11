@@ -38,6 +38,11 @@ html {
                 object-fit: cover;
             }
 
+            .container-section {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0px 50px;
+            }
 
             /* Container for single columns in main 
                Used for the blog index mobile */
@@ -58,22 +63,14 @@ html {
                     }
                 }
                 &.card {
+                    min-width: 250px;
+                    min-height: 250px;
+                    flex: 1 1 calc(50% - 20px);
                     .one-section-content {
-                        max-width: 350px;
-                        max-height: 300px;
                         background-color: aliceblue;
                         margin: 0 auto;
                         text-align-last: left;
                         position: relative;
-                        overflow: hidden;
-                        border-radius: 2px;
-                        border-top: 15px solid;
-                        border-right: 11px solid;
-                        border-right-color: #e0e0e0;
-                        border-top-color: aliceblue;
-                        border-bottom-right-radius: 0px;
-                        border-top-left-radius: 15px;
-                        border-bottom-right-radius: 17px;
                         h2 {
                             position: absolute;
                             bottom: 0;
@@ -97,66 +94,8 @@ html {
                         }
                     }
                 }
-
-                /* Organizes content display of single column 
-                   Default for mobile */
-                .one-section-content {
-                    margin: 0 auto;
-                    padding-left: 2px;
-                    padding-right: 2px;
-                    text-align-last: left;
-                    width: 275px;
-
-                    /* Desktop display for single column */
-                    @media screen and (min-width: 700px) {
-                        width: 60%;
-                    }
-                }
-
-                /* Container for double columns in main
-                   Used for the home index desktop */
-                @media screen and (min-width: 700px) {
-                    padding: 20px;
-                }
             }
 
-            /* Container for double columns in main
-               Used for the home index mobile */
-            .two-section-container {
-                padding: 4px;
-                text-align-last: center;
-
-                /* Organizes content display of double columns 
-                   Default for mobile */
-                .two-section-content {
-                    display: block;
-                    margin: 0 auto;
-                    text-align-last: left;
-                    vertical-align: top;
-                    width: 275px;
-
-                    /* Image display inside a double columns  
-                       Used for both mobile and desktop */
-                    img {
-                        margin-bottom: 10px;
-                        max-height: 100%;
-                        max-width: 100%;
-                        padding-top: 15px;
-                    }
-
-                    /* Desktop display for double columns */
-                    @media screen and (min-width: 700px) {
-                        display: inline-block;
-                        width: 300px;
-                    }
-                }
-
-                /* Container for double columns in main
-                   Used for the home index desktop */
-                @media screen and (min-width: 700px) {
-                    padding: 20px;
-                }
-            }
         }
     }
 }

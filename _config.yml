@@ -16,7 +16,7 @@
 title: Kaira Villanueva
 email: fzf.villanueva@gmail.com
 description: Kaira Villanueva Portfolio - Software Engineer & Artist
-baseurl: "http://kairaygun.github.io"
+baseurl: 
 localhost: 4000
 mainhost: "http://localhost:4000"
 url: kaira.one
