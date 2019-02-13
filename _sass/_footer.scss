@@ -1,55 +1,18 @@
-/*** FOOTER  ***/
-
-
-/* Manipulates the footer section focusing
-   on color, margins, and sizing */
-
+/* Footer Layout */
 footer {
     background-color: $white-color;
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: 150px;
     margin-top: 5em;
     width: 100%;
+    font-size: 11px;
     .footer-container {
         margin: 20px 0 10px 0;
         display: flex;
         flex-direction: column;
-        .footer-content {
-            display: block;
-            padding: 5px;
-            vertical-align: top;
-            ul {
-                display: flex;
-                li {
-                    margin-bottom: 5px;
-                    background-color: $light-gray-color;
-                    color: $dark-gray-color;
-                    padding: 8px;
-                    border-radius: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 30px;
-                    width: 30px;
-                    margin-right: 5px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    &:hover {
-                        background-color: $dark-gray-color;
-                        color: $light-gray-color;
-                        cursor: pointer;
-                    }
-                }
-            }
-            h6 {
-                margin-bottom: 2px;
-            }
-            @media screen and (min-width: 600px) {
-                display: inline-block;
-                padding: 5px 10px 5px 5px;
-            }
-        }
+    }
+    h6 {
+        padding: 4px;
     }
 }

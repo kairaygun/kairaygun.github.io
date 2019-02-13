@@ -28,11 +28,12 @@ function openModal(index) {
         }
     });
 
-    onSlideShow(id);
 }
 
+    onSlideShow();
+
 function onSlideShow(id) {
-    let slideshowClass = id + "slideshow-content";
+    let slideshowClass = "slideshow-content";
     try {
         let imagesSlideshow = document.getElementsByClassName(slideshowClass)[0].children;
         let i = 0;
@@ -45,8 +46,8 @@ function onSlideShow(id) {
             }
         }
         i = 0;
-        let next = document.getElementsByClassName("next")[id - 1];
-        let prev = document.getElementsByClassName("prev")[id - 1];
+        let next = document.getElementsByClassName("next")[0];
+        let prev = document.getElementsByClassName("prev")[0];
 
         next.onclick = function() {
             if (i < imagesSlideshow.length - 1) {

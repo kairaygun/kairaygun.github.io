@@ -1,101 +1,208 @@
-/*** MAIN LAYOUT ***/
+/* Main Layout */
 
-/* Sets initial background color with a gradient */
 html {
-    background-color: $white-color;
-    height: 100%;
+  background-color: $white-color;
+  height: 100%;
 
-    /* Adds a grainy texture to the overall background */
-    body {
-        min-height: 100%;
-        -ms-overflow-style: none; // IE 10+ - hide scrollbar
-        overflow: -moz-scrollbars-none; // Firefox - hide scrollbar
 
-        &::-webkit-scrollbar {
-            display: none; // Safari and Chrome - hide scrollbar
+  body {
+    min-height: 100%;
+
+    header {
+      animation-duration: 1s;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 50px 90px 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      h1,
+      h2 {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+
+        span {
+          padding-left: 7px;
+          font-style: italic;
+          font-weight: 400;
         }
+      }
 
-        header {
-            background-color: aliceblue;
-            padding: 50px 0;
+      h2 {
+        font-size: 16px;
+      }
 
-            .subheader {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 10px 20px;
+      img {
+        max-width: 120px;
+        min-width: 120px;
+        max-height: 120px;
+        border-radius: 50%;
+        min-height: 120px;
+        margin-right: 15px;
+        border: 5px solid white;
+        filter: grayscale(100%);
+        box-shadow: 1px 1px 2px 2px #ccc;
+        margin-bottom: 15px;
+      }
+
+      .info-content {
+        padding: 5px;
+        vertical-align: top;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        max-height: 90px;
+        min-height: 90px;
+
+        ul {
+          display: flex;
+
+          li {
+            margin-bottom: 5px;
+            background-color: $light-gray-color;
+            color: $dark-gray-color;
+            padding: 8px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
+
+            &:last-child {
+              margin-right: 0;
             }
+
+            &:hover {
+              background-color: $dark-gray-color;
+              color: $light-gray-color;
+              cursor: pointer;
+            }
+          }
         }
+      }
 
-        /* Maintains the margins of the main content */
-        main {
-            margin-bottom: 20px;
-            margin-top: 80px;
-
-            /* Default sizing for images in main */
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .container-section {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0px 50px;
-            }
-
-            /* Container for single columns in main 
-               Used for the blog index mobile */
-            .one-section-container {
-                padding: 4px;
-                text-align-last: center;
-                margin-bottom: 50px;
-                &.blog-post {
-                    img {
-                        max-width: 600px;
-                        width: 100%;
-                        height: unset;
-                        object-fit: contain;
-                        border: 10px;
-                        border: 4px solid transparent;
-                        border-radius: 3px;
-                        box-shadow: 0 1px 1px #ddd;
-                    }
-                }
-                &.card {
-                    min-width: 250px;
-                    min-height: 250px;
-                    flex: 1 1 calc(50% - 20px);
-                    .one-section-content {
-                        background-color: aliceblue;
-                        margin: 0 auto;
-                        text-align-last: left;
-                        position: relative;
-                        h2 {
-                            position: absolute;
-                            bottom: 0;
-                            background-color: #ffffff;
-                            padding: 10px;
-                            border-top-right-radius: 3px;
-                            font-weight: 800;
-                            letter-spacing: 1.1px;
-                            text-transform: uppercase;
-                            z-index: 20;
-                            border-top: solid 4px;
-                            border-right: solid 5px #c2c2c2;
-                            border-color: #d7e2eb;
-                            border-right-color: #9ca7b1;
-                            margin-bottom: 0;
-                            font-size: 11px;
-                        }
-                        &:hover {
-                            box-shadow: 0 4px 10px #ddd;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-
-        }
     }
+
+    main {
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .container-section {
+        animation-duration: 2s;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .blog-post {
+          img {
+            max-width: 600px;
+            width: 100%;
+            height: unset;
+            object-fit: contain;
+            border: 10px;
+            border: 4px solid transparent;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px #ddd;
+          }
+        }
+
+        .project-post {
+          background-color: #ffffff;
+          background-size: cover;
+          box-shadow: 0px 2px 6px #eeeeee;
+          vertical-align: top;
+          margin-bottom: 150px;
+          margin: 0 auto;
+          width: 100%;
+          padding: 80px 20px;
+
+          h2,
+          h3,
+          p {
+            max-width: 800px;
+            margin: 0 auto;
+          }
+
+          h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+          }
+
+          h3 {
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          p {
+            line-height: 30px;
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 30px;
+          }
+
+          .tools {
+            font-weight: 300;
+            display: block;
+            border-bottom: 1px solid;
+            padding-bottom: 1px;
+            margin-bottom: 10px;
+          }
+
+          li {
+            color: $dirty-white-color;
+            font-size: 15px;
+            line-height: 17px;
+            padding: 15px 0 15px 0;
+          }
+        }
+
+        .card {
+          min-width: 250px;
+          min-height: 250px;
+          flex: 1 1 calc(50%);
+
+          .card-content {
+            background-color: aliceblue;
+            margin: 0 auto;
+            text-align-last: left;
+            position: relative;
+            display: flex;
+
+            h2 {
+              position: absolute;
+              padding: 10px;
+              border-top-right-radius: 3px;
+              letter-spacing: 1.1px;
+              text-transform: uppercase;
+              color: $white-color;
+            }
+
+            &:hover {
+              filter: hue-rotate(90deg);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
 }

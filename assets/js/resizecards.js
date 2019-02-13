@@ -1,4 +1,5 @@
 window.addEventListener("resize", ()=> {
+	console.log("check");
 	resizeCards();
 });
 
@@ -8,11 +9,11 @@ window.addEventListener("load", ()=> {
 
 function resizeCards() {
 	let cards = document.querySelectorAll(".card");
-	let newSize = cards[0].offsetWidth;
 	for (c of cards) {
 		c.style.maxWidth  = null;
 		c.style.maxHeight = null;		
 	}
+	let newSize = cards[0].offsetWidth;
 	for (c of cards) {
 		c.style.maxWidth  = `${newSize}px`;
 		c.style.maxHeight = `${newSize}px`;

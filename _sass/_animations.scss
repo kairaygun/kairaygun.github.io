@@ -1,8 +1,4 @@
-/*** ANIMATIONS ***/
-
-
-/* Blinking - blinks the anchor links
-   and span element of H1 headers */
+/* Animations */
 
 .blink {
     animation: blink-animation 1s steps(5, start) infinite;
@@ -19,32 +15,19 @@
     }
 }
 
-
-/* Modal Animation - this causes the modal
-  on the main portfolio page to animate
-  from a smaller scale to a larger scale*/
-.modal-effect {
-    opacity: 0;
-}
-.modal-effect-show {
-    animation-name: modal-animation;
-    animation-duration: 0.2s;
+.fade-in {
+    animation-name: fade-in;
     animation-fill-mode: forwards;
 }
-@keyframes modal-animation {
+
+@keyframes fade-in {
     0% {
-        -webkit-transform: scale(0.20);
-        -moz-transform: scale(0.20);
-        -ms-transform: scale(0.20);
-        transform: scale(0.20);
         opacity: 0.00;
     }
 
     100% {
-        -webkit-transform: scale(1.00);
-        -moz-transform: scale(1.00);
-        -ms-transform: scale(1.00);
-        transform: scale(1.00);
         opacity: 1.00;
     }
 }
+
+
