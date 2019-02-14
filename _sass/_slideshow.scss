@@ -1,12 +1,16 @@
 /* Slideshow Container */
 .slideshow-container {
-    margin: auto;
-    max-width: 1000px;
+    width: 100%;
     position: relative;
-    max-height: 500px;
-    background-color: $dark-gray-color;
+    margin-bottom: 50px;
+
     .image-slides {
         object-fit: contain;
+        pointer-events: none;
+    }
+
+    .slideshow-content {
+        pointer-events: none;
     }
 
 }

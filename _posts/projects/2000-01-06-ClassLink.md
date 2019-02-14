@@ -21,19 +21,13 @@ I was tasked with converting the final design into a responsive and interactable
 
 <h3>Product</h3>
 
-
-<div class ="slideshow-container">
+<div class ="slideshow-container" size="4">
 	<button class="prev">&#10094;</button>
 	<button class="next">&#10095;</button>
 	<div class="slideshow-content">
-		<img class="image-slides" src="/assets/images/projects/classlink/app-library/1.png">
-<img class="image-slides" src="/assets/images/projects/classlink/app-library/2.png">
-<img class="image-slides" src="/assets/images/projects/classlink/app-library/3.png">
-<img class="image-slides" src="/assets/images/projects/classlink/app-library/4.png">
-
-</div>
+		<img class="image-slides" src="/assets/images/projects/classlink/app-library/0.png">
+	</div>
 </div>  
-
 
 <h2>ClassLink - Wizard</h2>
 
@@ -45,13 +39,17 @@ ClassLink’s main application is OneClick, which essentially acts as a launch p
         
 <h3>Processs</h3>
 
-<img class="process-image" src="/assets/images/projects/shubzilla/process/1.png">
-
 The process took a couple of iterations before arriving at the final process. I initially used Figma to design the mock-ups, then moved to CodePen, and finally converting the project into an Angular 6 application. There are five steps--choosing a profile image, setting up password, enabling two-factor authentication, linking social accounts, and setting up other methods of signing on via QR code and facial recognition. The left side is a complete demarcation of the process. Therefore, the user can easily see the current progress of their profile setup.
 
 <h3>Product</h3>
 
-<img class="process-image" src="/assets/images/projects/shubzilla/process/1.png">
+<div class ="slideshow-container" size="8">
+	<button class="prev">&#10094;</button>
+	<button class="next">&#10095;</button>
+	<div class="slideshow-content">
+		<img class="image-slides" src="/assets/images/projects/classlink/wizard/0.png">
+	</div>
+</div>  
 
 
 <h2>ClassLink - Badges</h2>
@@ -64,11 +62,14 @@ Many of the users that will use the ClassLink Badging application consists of te
         
 <h3>Processs</h3>
 
-<img class="process-image" src="/assets/images/projects/shubzilla/process/1.png">
-
 These are templates and not fixed badges, so users can customize the icon and text of the badge. There are three different types of badges. I separated them into three sets. The first set consists of badges with only text, the second set consists of badges with only an image, and the last set of badges have both text and image. I have also curtailed a specific range of colors for these badges. Each color palette consists of five colors, and each color in a palette is established with a certain amount of brightness, which keeps the badges consistent. I mainly used Illustrator to design the badges, and later exported the badges to Figma for ease of access.
 
 <h3>Product</h3>
 
-<img class="process-image" src="/assets/images/projects/shubzilla/process/1.png">
-
+<div class ="slideshow-container" size="7">
+	<button class="prev">&#10094;</button>
+	<button class="next">&#10095;</button>
+	<div class="slideshow-content">
+		<img class="image-slides" src="/assets/images/projects/classlink/badges/0.png">
+	</div>
+</div>  

@@ -1,70 +1,60 @@
-const container = document.querySelector('.container-section');
-container.addEventListener('click', (event) => {
-    if (event.toElement.nodeName === 'IMG' && event.toElement.className === 'image-portfolio') {
-        openModal(event.target.id);
+class Slider {
+    constructor(slide, size) {
+        this.slideImage = slide.children[slide.children.length - 1].children[0];
+        this.prevButton = slide.children[0];
+        this.nextButton = slide.children[1];
+        this.slideIndex = 0;
+        this.slideLength = size;
+        this.onStartSlide();
     }
-}, true);
+
+    onStartSlide() {
+        this.nextSlide();
+        this.prevSlide();
+    }
+
+    nextSlide() {
+        this.nextButton.addEventListener("click", () => {
+            if (this.slideIndex === this.slideLength - 1) {
+                this.slideIndex = 0;
+                this.getNewImage(this.slideImage);
+            }
+            else {
+                this.slideIndex += 1;
+                this.getNewImage(this.slideImage);
+            }
+        });
+    }
+
+    prevSlide() {
+        this.prevButton.addEventListener("click", () => {
+            if (this.slideIndex === 0) {
+                this.slideIndex = this.slideLength - 1
+                this.getNewImage(this.slideImage);
+            } else {
+                this.slideIndex -= 1
+                this.getNewImage(this.slideImage);
+            }
+        });
+    }
+
+    getNewImage(imageSource) {
+        let nextImage = `${this.slideIndex}.png`;
+        let source = imageSource.src.split("/");
+        source[source.length - 1] = nextImage;
+        let newImage = source.join("/");
+        this.slideImage.src = newImage;
+        console.log(this.slideIndex, this.slideLength);
+    }
 
 
-function openModal(index) {
-    let id = index.split('-')[0];
-    let modal = document.getElementById(`${id}-modal`);
-    console.log(modal);
-    container.className += " open-modal";
-    modal.querySelector(".modal-effect").className += " modal-effect-show";
-    modal.style.display = "block";
-
-    document.getElementsByClassName("close-modal")[id - 1].addEventListener('click', () => {
-        modal.style.display = "none";
-        container.className = "container-section";
-        modal.querySelector(".modal-effect").className = "modal-content modal-effect";
-    });
-
-    document.addEventListener('click', () => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            container.className = "container-section";
-            modal.querySelector(".modal-effect").className = "modal-content modal-effect";
-        }
-    });
+    printOut() {
+        console.log(this.slideImage, this.prevButton, this.nextButton, this.slideIndex, this.slideLength);
+    }
 
 }
 
-    onSlideShow();
-
-function onSlideShow(id) {
-    let slideshowClass = "slideshow-content";
-    try {
-        let imagesSlideshow = document.getElementsByClassName(slideshowClass)[0].children;
-        let i = 0;
-
-        for (i; i < imagesSlideshow.length; i++) {
-            if (i === 0) {
-                imagesSlideshow[i].style.display = "block";
-            } else {
-                imagesSlideshow[i].style.display = "none";
-            }
-        }
-        i = 0;
-        let next = document.getElementsByClassName("next")[0];
-        let prev = document.getElementsByClassName("prev")[0];
-
-        next.onclick = function() {
-            if (i < imagesSlideshow.length - 1) {
-                imagesSlideshow[i].style.display = "none";
-                i = i + 1;
-                imagesSlideshow[i].style.display = "block";
-            }
-        }
-
-        prev.onclick = function() {
-            if (i > 0) {
-                imagesSlideshow[i].style.display = "none";
-                i = i - 1;
-                imagesSlideshow[i].style.display = "block";
-            }
-        }
-    } catch (e) {
-        console.log(e instanceof TypeError);
-    }
+const sliders = document.querySelectorAll(".slideshow-container");
+for (s of sliders) {
+    let slider = new Slider(s, parseInt(s.attributes.size.value));
 }

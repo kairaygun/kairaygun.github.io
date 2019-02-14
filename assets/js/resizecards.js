@@ -1,5 +1,4 @@
 window.addEventListener("resize", ()=> {
-	console.log("check");
 	resizeCards();
 });
 
