@@ -17,8 +17,14 @@ img-preview: /assets/images/projects/shubzilla/preview.png
         
 <h3>Processs</h3>
 
-<img class="process-image" src="/assets/images/projects/shubzilla/process/1.png">
+Shubzilla provided me with image references from Fallout (video game) and screenshots from Godzilla. Most of the images have a consistent theme of an element that is either in flames or in smoke. Keeping that in mind, I went with a palette that resembled these themes but I did not want the website to feel harsh, so I used a gradient and softer and warmer reds to represent the look she wanted.
 
 <h3>Product</h3>
 
-Shubzilla provided me with image references from Fallout (video game) and screenshots from Godzilla. Most of the images have a consistent theme of an element that is either in flames or in smoke. Keeping that in mind, I went with a palette that resembled these themes but I did not want the website to feel harsh, so I used a gradient and softer and warmer reds to represent the look she wanted.
+<div class ="slideshow-container" size="3">
+	<button class="prev">&#10094;</button>
+	<button class="next">&#10095;</button>
+	<div class="slideshow-content">
+		<img class="image-slides" src="/assets/images/projects/shubzilla/portfolio/0.png">
+	</div>
+</div>  
