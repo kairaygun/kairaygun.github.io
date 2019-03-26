@@ -13,7 +13,7 @@ img-preview: /assets/images/projects/classlink/preview.png
 
 <h3>Research</h3>
 
-ClassLink App Library is a component of a larger application, OneClick. Essentially, OneClick is a launch pad for other application where students and teaches can access the applications they need in one place. Most of the users are students, which can range from kindergarten to twelfth grade. The former design conformed to a decade old paradigm that had glossy buttons and weird navigation. I helped with pushing the design forward to a simpler layout.
+ClassLink App Library is a component of a larger application, OneClick. Essentially, OneClick is a launch pad for other applications where students and teachers can access the applications they need in one place. Most of the users are students, which can range from kindergarten to twelfth grade. The former design conformed to a decade old paradigm that had glossy buttons and uneasy navigation. I pushed the design forward to a cleaner layout.
         
 <h3>Processs</h3>
 
