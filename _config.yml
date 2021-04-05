@@ -4,7 +4,7 @@ description: Kaira Villanueva Portfolio - UX Engineer
 baseurl: ""
 localhost: 4000
 mainhost: "http://localhost:4000"
-url: kaira.design
+url: https://kaira.design
 
 # Build settings
 markdown: kramdown
