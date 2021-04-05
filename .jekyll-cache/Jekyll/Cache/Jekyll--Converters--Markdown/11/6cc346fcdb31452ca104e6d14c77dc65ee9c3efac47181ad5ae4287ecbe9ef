@@ -1,0 +1,199 @@
+I"�B<p>I don’t want to use Apple’s <a href="https://developer.apple.com/library/ios/documentation/MessageUI/Reference/MFMailComposeViewController_class/">MFMailComposeViewController</a>, since this has a custom view controller that swerves away from my application’s user interface. I want to send emails immediately with one press, similar to a newsletter, and not do it one by one. An alternate solution is Mailgun’s API. I used Mandrill separately for the web version of the application.</p>
+
+<p><strong>What are APIs?</strong></p>
+
+<p>API stands for Application Program Interface.  When a company provides an API, they are opening up their development tools to other developers outside of their team.  Granted, these APIs will still have restrictions, since they often only provide niche tools and not the whole development environment used by their respective companies. Mandrill and Mailgun are APIs that follow the RESTful architecture; allowing applications to communicate between clients and servers under a set number of actions, such as GET, POST, PUT, and DELETE.</p>
+
+<p><strong>For example:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> 
+    <span class="dl">"</span><span class="s2">users</span><span class="dl">"</span><span class="p">:</span> 
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">290</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Creep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shwoopt87@email.com</span><span class="dl">"</span>
+        <span class="p">},</span>
+        
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Let’s say there’s a company that provides a list of individuals that have been arrested for unethical conduct near the area. I want access to this information that is provided in the JSON snippet above. The list is clearly very short—one person is only listed.</p>
+
+<h3>GET</h3>
+
+<p>The client, myself, will call data from the company’s API, asking for the data that they have made available. GET retrieves data from the server and shows it to the client.</p>
+
+<p>Response:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> 
+    <span class="dl">"</span><span class="s2">users</span><span class="dl">"</span><span class="p">:</span> 
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">290</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Creep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">40</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shwoopt87@email.com</span><span class="dl">"</span>
+        <span class="p">},</span>
+
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3>POST</h3>
+
+<p>Encased within this hypothetical scenario, a friend called me and mentioned that he knows someone that should also be added to the list. The name is Kujo, id is 990 , age is unknown, and email is arfarf@email.com. I will use POST to add this unlawful citizen. Great, now I have two users! POST appends data to the source.</p>
+
+<p>Response:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> 
+    <span class="dl">"</span><span class="s2">users</span><span class="dl">"</span><span class="p">:</span> 
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">290</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Creep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">40</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shwoopt87@email.com</span><span class="dl">"</span>
+        <span class="p">},</span>
+
+
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">990</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Kujo</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">unknown</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">arfarf@email.com</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3>PUT</h3>
+
+<p>Ah yes! For some magical reason, it came to me in a dream, that Kujo’s age is 80, so I will use PUT to update the information I just posted. PUT updates existing data.</p>
+
+<p>Response:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> 
+    <span class="dl">"</span><span class="s2">users</span><span class="dl">"</span><span class="p">:</span> 
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">290</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Creep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">40</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shwoopt87@email.com</span><span class="dl">"</span>
+        <span class="p">},</span>
+
+
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">990</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Kujo</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">80</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">arfarf@email.com</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3>DELETE</h3>
+
+<p>There was a mishap, and Kujo turns out to be a vicious dog, and not a human, and this list is only for people, so I will have to delete Kujo for now. DELETE removes data from the source. Thus, I am back again with my one-person list.</p>
+
+<p>Response:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> 
+    <span class="dl">"</span><span class="s2">users</span><span class="dl">"</span><span class="p">:</span> 
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">290</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Creep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">40</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">shwoopt87@email.com</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3>Mandrill and Mailgun API Overview:</h3>
+
+<p><strong>Mandrill</strong></p>
+
+<p>Mandrill is an email delivery API by Mailchimp. The difference between Mailchimp and Mandrill is that Mailchimp is an external platform for sending out newsletters. On the other hand, integrating Mandrill into your application will allow for more customization when sending out emails without being limited to preformatted templates. I used Mandrill API to send emails via custom web forms.</p>
+
+<p><strong>Mailgun</strong></p>
+
+<p>Unlike Mandrill, I went the other route and used Mailgun for an iOS application. I wanted to make the same application twice in different platforms while trying two mailing APIs. One of the many beautiful aspects about iOS development is CocoaPods. As I was setting up Mailgun API and quickly did a search if a CocoaPod exists for Mailgun API, and lo and behold, it does exist!</p>
+
+<p>Both applications are functional. However, be cautious, the Mandrill API code I will be providing is purely in vanilla JavaScript, and does not contain a wrapper. In other words, your API key will be completely visible to the world if you host that web application online unless you embed your API Key in another file that acts as a wrapper for your JavaScript.</p>
+
+<h3>Setting Up: Mandrill</h3>
+
+<p>•	Sign-up for an account <a href="https://mandrill.com/signup/">here</a></p>
+
+<p>•	Make sure you have a domain ready. Mandrill does not provide you with a free domain</p>
+
+<p>•	Check your domain server settings via <a href="https://mandrillapp.com/settings/">Mandrill</a> in sending-domains to pass all the DNS tests.</p>
+
+<p>•	Create your API Key.  Go to settings → SMTP &amp; API Info</p>
+
+<p>•	Once that is looking pretty spiffy, then you are good to go!</p>
+
+<p>•	Setup your HTML &amp; CSS based on your design preference</p>
+
+<p>•	Add this to your HTML header:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://mandrillapp.com/api/docs/js/mandrill.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>•	Implement Mandrill’s <a href="https://mandrillapp.com/api/docs/messages.JSON.html">message call</a>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Create a function to log the response from Mandrill API</span>
+<span class="kd">function</span> <span class="nx">response</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#response</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="c1">// Create an instance of the Mandrill class that takes your API key.</span>
+<span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mandrill</span><span class="p">.</span><span class="nx">Mandrill</span><span class="p">(</span><span class="dl">'</span><span class="s1">yourapikeygoeshere</span><span class="dl">'</span><span class="p">);</span>
+
+
+<span class="c1">// Create a variable for the API call parameters</span>
+<span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">from_email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">your domain email</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">to</span><span class="dl">"</span><span class="p">:[{</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">youremail@email.com</span><span class="dl">"</span><span class="p">}],</span>
+        <span class="dl">"</span><span class="s2">subject</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">hey this is through mandrill</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">whaaaddup!</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Create a function that takes in the parametrs for sending messages</span>
+<span class="kd">function</span> <span class="nx">sendTheMail</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">m</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">reponse</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+    <span class="p">},</span> 
+    <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">response</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Send that email!</span>
+<span class="nx">sendTheMail</span><span class="p">();</span></code></pre></figure>
+
+<h3>Setting Up: Mailgun</h3>
+
+<p>•	Sign-up for Mailgun <a href="https://mailgun.com/signup">first</a>.</p>
+
+<p>•   Access the dashboard and check for <strong>Domain Name</strong> under <strong>Your Sandbox Domain</strong></p>
+
+<p>•   Start-up your Xcode project in Objective-C</p>
+
+<p>•   Install Mailgun <a href="https://cocoapods.org/pods/mailgun">CocoaPod</a>.</p>
+
+<p>•   Import Mailgun header file into your project:</p>
+
+<figure class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">#import &lt;mailgun/mailgun.h&gt;</code></pre></figure>
+
+<p>•   Add this Objective-C snippet to send email:</p>
+
+<figure class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">    Mailgun *mailgun = [Mailgun clientWithDomain:@"APIBaseURL" 
+                                          apiKey:@"APIKey"];
+
+    [mailgun sendMessageTo:@"insert email"
+                      from:@"APIBaseURL"
+                      body:@"insert message"];</code></pre></figure>
+
+:ET
