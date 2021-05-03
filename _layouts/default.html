@@ -3,21 +3,47 @@
     {% include header.html %}
     <main id="main">
         <!-- Portfolio Section -->
-        <section class="container-section fade-in">
-            {% for post in site.categories.projects %}
-            <div class="card">
-                <div class="card-content">
-                    <a href="{{ post.url }}">
-                        <img class="image-portfolio" src="{{ post.img-preview }}" alt="image" id="{{ "-modal-button" | prepend: forloop.index }}">
-                    </a>
-                    <h2>{{ post.title }}</h2>      
+        <section class="fade-in main-view">   
+            <div class="half-view biography-view">
+                <div class="circle-1 c1"></div>
+                <div class="circle-2 c2"></div>
+                <div class="circle-3 c3"></div>
+                <div class="circle-4 c4"></div>
+                <div class="half-view-content hvc01">
+                    <h3>Visual Designer + Artist</h3>
+                    <p>Hello, I’m Kaira. I design  meaningful digital and interactive 
+                    experiences influenced by data and creative experimentation.</p>
                 </div>
             </div>
-            {% endfor %}
+            <div class="half-view portfolio-view">
+                <div class="half-view-content hvc02">
+                    {% for post in site.categories.projects %}
+                    <div class="portfolio-item">
+                        <div class="card">
+                            <div class="card-button-line"></div>
+                            <div class="card-content">
+                                <div class="card-meta-data">
+                                    <h2>{{ post.title }}</h2>      
+                                    <h3>{{ post.desc }}</h3>
+                                    <h4>{{ post.type }}</h4>
+                                </div>
+                                <div class="card-preview">                                    
+                                    <img class="image-portfolio" src="{{ post.img-preview }}" 
+                                        alt="image" id="{{ "-modal-button" | prepend: forloop.index }}">
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="card-button">
+                            <a href="{{ post.url }}">
+                                Read Case Study
+                            </a>
+                        </div>             
+                    </div>                    
+                    {% endfor %}
+                </div>
+            </div>
         </section>
-
     </main>
-    {% include footer.html %}
 </body>
 <script src="/assets/js/modal.js"></script>
 <script src="/assets/js/resizecards.js"></script>

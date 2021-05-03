@@ -1,17 +1,27 @@
 {% include head.html %}
 <body>
-   {% include navigation.html %}
+    {% include header.html %}
     <main id="main">
-        <h1>KAIRA'S THOUGHTS<span class="blink">_</span></h1>
-        <section class="container-section">
-        	<div class="one-section-container blog-post">
-                <div class="one-section-content">
-		            {{ content }}
+        <!-- Portfolio Section -->
+        <section class="fade-in main-view">   
+            <div class="half-view biography-view">
+                <div class="circle-1 c1"></div>
+                <div class="circle-2 c2"></div>
+                <div class="circle-3 c3"></div>
+                <div class="circle-4 c4"></div>
+                <div class="half-view-content hvc01">
+                    <h3>Visual Designer + Artist</h3>
+                    <p>Hello, I’m Kaira. I design  meaningful digital and interactive 
+                    experiences influenced by data and creative experimentation.</p>
                 </div>
-        	</div>
+            </div>
+            <div class="half-view portfolio-view">
+                <div class="half-view-content hvc02">
+                    {{ content }}
+            </div>
         </section>
     </main>
-    {% include footer.html %}
 </body>
 <script src="/assets/js/modal.js"></script>
+<script src="/assets/js/resizecards.js"></script>
 </html>

@@ -1,4 +1,5 @@
 /* Navigation Buttons */
+
 nav {
     position: fixed;
     top: 0;
@@ -7,22 +8,28 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;    
+
     .navigation-items {
         margin-right: 20px;
         display: flex;
+
         .nav-item {
-            background-color: $light-gray-color;
-            color: $dark-gray-color;
+            background-color: #8181ff;
+            color: #fff;
+            margin-left: 40px;
             padding: 20px;
+
             &:first-child {
                 border-bottom-left-radius: 3px;
             }
+
             &:last-child {
                 border-bottom-right-radius: 3px;
             }
+
             &:hover {
                 cursor: pointer;
-                background-color: $dark-gray-color;
+                background-color: #ddddff;
                 color: $light-gray-color;
             }
         }

@@ -1,18 +1,21 @@
 {% include head.html %}
-
 <body>
     {% include header.html %}
-    {% include navigation.html %}
     <main id="main">
-        <section class="container-section">
-            <div class="post-container">
-                <div class="post-content">
-                    {{ content }}
+        <!-- Portfolio Section -->
+        <section class="fade-in main-view">   
+            <div class="full-view portfolio-view">
+                <div class="half-view-content hvc02">
+                    <div class="post-container">
+                        <div class="post-content">
+                            {{ content }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    {% include footer.html %}
 </body>
 <script src="/assets/js/modal.js"></script>
+<script src="/assets/js/resizecards.js"></script>
 </html>
