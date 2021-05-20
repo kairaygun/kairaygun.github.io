@@ -1,7 +1,9 @@
 {% include head.html %}
 <body>
-    {% include header.html %}
-    {% include navigation.html %}
+    <div class="main-header">
+        {% include header_main.html %}
+        {% include navigation.html %}
+    </div>
     <main id="main">
         <section class="container-section">
             <div class="post-container">
@@ -24,5 +26,4 @@
     {% include footer.html %}
 </body>
 <script src="/assets/js/modal.js"></script>
-<script src="/assets/js/resizecards.js"></script>
 </html>

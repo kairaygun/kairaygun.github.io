@@ -1,24 +1,32 @@
 {% include head.html %}
 <body>
-    {% include header.html %}
+    <div class="main-header">
+        {% include header_main.html %}
+        {% include navigation.html %}
+    </div>
     <main id="main">
         <!-- Portfolio Section -->
         <section class="container-section fade-in">
             {% for post in site.categories.projects %}
             <div class="card">
+                <h2>{{ post.company }}</h2>      
+                <h3>{{ post.project }}</h3>      
                 <div class="card-content">
                     <a href="{{ post.url }}">
-                        <img class="image-portfolio" src="{{ post.img-preview }}" alt="image" id="{{ "-modal-button" | prepend: forloop.index }}">
+                        <img class="image-portfolio" src="{{ post.img-preview }}" alt="image" 
+                             id="{{ "-modal-button" | prepend: forloop.index }}">
                     </a>
-                    <h2>{{ post.title }}</h2>      
+                </div>
+                <h4>{{ post.type }}</h4>      
+                <div class="card-bottom">
+                    <p>{{ post.description }}</p>
+                    <button><a href="{{ post.url }}">SEE MORE</a></button>
                 </div>
             </div>
             {% endfor %}
         </section>
-
     </main>
     {% include footer.html %}
 </body>
 <script src="/assets/js/modal.js"></script>
-<script src="/assets/js/resizecards.js"></script>
 </html>
