@@ -7,7 +7,7 @@ window.addEventListener("load", ()=> {
 });
 
 function resizeCards() {
-	let cards = document.querySelectorAll(".card");
+	let cards = document.querySelectorAll(".small-card");
 	for (c of cards) {
 		c.style.maxWidth  = null;
 		c.style.maxHeight = null;		

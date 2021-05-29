@@ -1,0 +1,127 @@
+I"l<div class="project">
+
+	<div class="header">
+		<img src="/assets/images/projects/columbia/project-post/01.png" />
+		<div class="info">
+			<h1>Project</h1>
+			<p>Risk Communication</p>
+
+			<h1>With</h1> 
+			<p>Columbia University</p>
+
+			<h1>Roles</h1>
+			<p>UX Design, Research, and UI Design</p>
+		</div>
+	</div>
+
+	<div class="section">
+		<h1>DISCOVERY</h1>
+		<h2>BACKGROUND</h2>
+		<div class="two-column">
+			<p>While working on my thesis, my advisor, Professor Robert Soden 
+			(http://robertsoden.io/) recruited me as a researcher where I collaborated 
+			with a team of sociologists, product designers, and computer scientists 
+			between Columbia University, University of Washington: Seattle, and 
+			University of Colorado: Boulder to assess a website redesign for the 
+			National Hurricane Center.</p>
+
+			<p>As a result, we presented 18 design opportunities to the National 
+			Hurricane Center, and one of the opportunities they picked is designing 
+			for user localization, which is the focus of my thesis, “Exploring User 
+			Localization as a Design Opportunity through Human-Centered Design 
+			Principles for the National Hurricane Center Home Page (NHC.NOAA.GOV).”</p>
+		</div>
+	</div>
+
+	<div class="section">
+		<h2>RESEARCH GOALS</h2>
+		<ul>
+			<li>In a state of emergency during a hurricane, how do we provide 
+			users information relevant to their situation?</li>			
+			<li>Which information is important to display in order for them to 
+			make the best decision that would ethically suit their needs? </li>
+			<li>What do users look for when assessing the risk of a hurricane?</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>INTERVIEWS</h2>
+		<div class="two-column">
+			<p>35 interviews were conducted remotely through Zoom. There are three 
+			categories of questions that we used: demographics, past experiences with 
+			disasters, and post concerns. We interviewed participants across the United 
+			States that were in locations susceptible to hurricane disasters. The 
+			initial part of the process focuses on the demographics and background, 
+			mostly asking how long they have lived in their current residency, or if
+			they have any prior training related to disasters or severe weather.</p>
+
+			<p>These questions generally assess for experience and familiarity of 
+			users to hurricanes which would help in constructing the display of the 
+			home page. The next set of questions aimed at how they were able to retrieve
+			hurricane information, and the actions that they have taken based on the 
+			lack of or known information. 4 themes were generated from the inteviews, 
+			and 166 codes were collected. Afterwards, the theme I focused on is 
+			information seeking and sources.</p>
+		</div>
+		<div class="stats">
+			<div><p>35</p><p>PARTICIPANTS</p></div>
+			<div><p>4</p><p>THEMES</p></div>
+			<div><p>166</p><p>TOTAL CODES</p></div>
+			<div><p>82</p><p>CODES ON INFORMATION SEEKING AND SOURCES</p></div>
+		</div>
+
+		<div class="spacing">
+			<img src="/assets/images/projects/columbia/project-post/02.png" />
+		</div>
+	</div>
+
+	<div class="section">
+		<h2>COMPETITOR ANALYSIS</h2>
+		<div class="two-column">
+			<p>After all of the code reviews, 18 opportunities were presented to 
+			the National Hurricane Center. They provided their feedback and mentioned 
+			that they would like to see a design for user localization. From that point 
+			on, the first thing I did is conducted a competitor analysis to check 
+			how other applications are utilizing user localization on their home pages. 
+			Patterns started appearing, such as defaulting to user localization where 
+			the application would directly show the results without asking or a search 
+			input bar that asks for a zip code. Over 60 applications were audited for 
+			user localization.
+			</p>
+
+			<p>Weather.com is interesting because this acts as two-fold: automatic 
+			and manual geolocation. The automatic geolocation is used on the front 
+			page, and since Weather.com relies on ads, they could take advantage of 
+			the automated geolocation to cater to a specific audience. The NHC could 
+			use this same technique, and on the front-page, it could automate the 
+			geolocation and check if the area has any upcoming hurricanes or alerts. 
+			Websites that sell products are often given the option to pick up an item 
+			via store, and the stores listed are based on proximity to the user’s 
+			location (retrieved via geolocation).</p>
+		</div>
+
+		<div class="spacing">
+			<img src="/assets/images/projects/columbia/project-post/03.png" />
+		</div>
+	</div>
+
+	<div class="section">
+		<h1>DEFINE</h1>
+		<h2>BACKGROUND</h2>
+		<div class="two-column">
+			<p>While working on my thesis, my advisor, Professor Robert Soden 
+			(http://robertsoden.io/) recruited me as a researcher where I collaborated 
+			with a team of sociologists, product designers, and computer scientists 
+			between Columbia University, University of Washington: Seattle, and 
+			University of Colorado: Boulder to assess a website redesign for the 
+			National Hurricane Center.</p>
+
+			<p>As a result, we presented 18 design opportunities to the National 
+			Hurricane Center, and one of the opportunities they picked is designing 
+			for user localization, which is the focus of my thesis, “Exploring User 
+			Localization as a Design Opportunity through Human-Centered Design 
+			Principles for the National Hurricane Center Home Page (NHC.NOAA.GOV).”</p>
+		</div>
+	</div>
+</div>
+:ET

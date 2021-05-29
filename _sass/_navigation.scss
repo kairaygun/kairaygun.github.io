@@ -1,24 +1,30 @@
-/* Navigation Buttons */
+/*** NAVIGATION  ***/
 nav {
-    position: fixed;
     top: 0;
-    width: 100%;
     z-index: 1;
     display: flex;
     justify-content: flex-start;
-    align-items: center;    
+    align-items: center;  
     .navigation-items {
         margin-right: 20px;
         display: flex;
+        flex-direction: column;
         .nav-item {
-            background-color: $light-gray-color;
-            color: $dark-gray-color;
+            a {
+                text-decoration: none;
+            }
+            color: $black-color;
             padding: 20px;
+            font-size: 30px;
+            font-family: Consolas;
+            text-align: right;
+            font-weight: 600;
             &:first-child {
                 border-bottom-left-radius: 3px;
             }
             &:last-child {
                 border-bottom-right-radius: 3px;
+                margin-top: 30px;
             }
             &:hover {
                 cursor: pointer;
@@ -28,3 +34,7 @@ nav {
         }
     }
 }
+
+
+
+

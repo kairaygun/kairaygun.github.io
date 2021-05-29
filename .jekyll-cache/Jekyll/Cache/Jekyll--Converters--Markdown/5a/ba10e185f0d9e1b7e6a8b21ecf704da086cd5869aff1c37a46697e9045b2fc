@@ -1,0 +1,37 @@
+I"�<div class="project">
+	<div class="header">
+		<img src="/assets/images/projects/columbia/project-post/01.png" />
+		<div class="info">
+			<h1>Project</h1>
+			<p>Risk Communication</p>
+
+			<h1>With</h1> 
+			<p>Columbia University</p>
+
+			<h1>Roles</h1>
+			<p>UX Design, Research, and UI Design</p>
+		</div>
+	</div>
+
+	<div class="section">
+		<h1>DISCOVERY</h1>
+		<h2>BACKGROUND</h2>
+		<div class="two-column">
+			<p>While working on my thesis, my advisor, Professor Robert Soden 
+			(http://robertsoden.io/) recruited me as a researcher where I collaborated 
+			with a team of sociologists, product designers, and computer scientists 
+			between Columbia University, University of Washington: Seattle, and 
+			University of Colorado: Boulder to assess a website redesign for the 
+			National Hurricane Center.</p>
+
+			<p>As a result, we presented 18 design opportunities to the National 
+			Hurricane Center, and one of the opportunities they picked is designing 
+			for user localization, which is the focus of my thesis, “Exploring User 
+			Localization as a Design Opportunity through Human-Centered Design 
+			Principles for the National Hurricane Center Home Page (NHC.NOAA.GOV).”</p>
+		</div>
+	</div>
+
+
+</div>
+:ET
