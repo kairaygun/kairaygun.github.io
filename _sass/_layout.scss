@@ -105,7 +105,6 @@ html {
                     flex-direction: column;
                     border-radius: 2px;
                     background-color: #ffffff;
-                    position: relative;
                     flex: 1 1 calc(25% - 20px);
                     display: flex;
                     justify-content: center;
@@ -116,7 +115,7 @@ html {
                     top: 0;
                     transition-delay: 0.05s;
                     position: relative;
-                    margin-bottom: 150px;
+                    margin-bottom: 120px;
                     align-items: flex-start;
                     .description {
                         min-height: 80px;
@@ -155,6 +154,10 @@ html {
                 max-width: 600px;
                 margin: 0 auto;
                 margin-bottom: 190px;
+
+                img {
+                    max-height: 400px;
+                }
 
                 h2 {
                     border-top-right-radius: 3px;
@@ -235,7 +238,6 @@ html {
 
 
 /*** RESPONSIVE  ***/
-
 @media screen and (max-width: 1000px) {
     html {
         body {
