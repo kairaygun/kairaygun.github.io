@@ -30,7 +30,7 @@
         <h1 class="main-title">OTHER WORK</h1>
         <section class="container-section fade-in">
             <div class="other-design">
-                {% for post in site.categories.other-projects %}
+                {% for post in site.categories.other-projects reversed %}
                 <div class="small-card">
                     <div class="description">
                         <h1>{{ post.type }}</h1>      
